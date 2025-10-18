@@ -367,3 +367,8 @@ echo "OpenVAS installation and setup complete."
 - [Midterm - 3_Active_Directory_Configuration_Ross_Moravec_A00322717_Midterm_Project.pdf](assignments/Midterm - 3_Active_Directory_Configuration_Ross_Moravec_A00322717_Midterm_Project.pdf)
 - [Ross_Moravec_A00322717_Lab_6_Mobile_and_IoT_Security_Implementation.pdf](assignments/Ross_Moravec_A00322717_Lab_6_Mobile_and_IoT_Security_Implementation.pdf)
 <!-- AUTO-GENERATED: Assignments Index END -->
+
+<!-- PORTFOLIO: REFERENCES START -->
+- [Wazuh Documentation](https://documentation.wazuh.com/)
+- [Nessus Product Page](https://www.tenable.com/products/nessus)
+<!-- PORTFOLIO: REFERENCES END -->

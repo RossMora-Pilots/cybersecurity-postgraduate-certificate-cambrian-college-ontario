@@ -1,38 +1,37 @@
 #!/usr/bin/env python3
 import argparse
+import re
 import shutil
 import subprocess
 from pathlib import Path
 from scripts.portfolio._util import load_config, ensure_parent
 
 
-def first_comment_lines(p: Path, max_lines: int = 5) -> str:
+def extract_metadata(p: Path, max_lines: int = 15):
     try:
-        text = p.read_text(encoding="utf-8", errors="ignore").splitlines()
+        lines = p.read_text(encoding="utf-8", errors="ignore").splitlines()
     except Exception:
-        return ""
-    out = []
-    for line in text:
+        return {"desc": "", "usage": []}
+    comments = []
+    usage = []
+    for line in lines:
         s = line.strip()
-        if p.suffix.lower() == ".ps1":
-            if s.startswith("#"):
-                out.append(s.lstrip("# "))
-            elif s == "":
-                continue
-            else:
-                break
+        if p.suffix.lower() != ".ps1" and s.startswith("#!/"):
+            continue
+        if s.startswith('#'):
+            body = s.lstrip('#').strip()
+            comments.append(body)
+            m = re.match(r"(?i)usage\s*:\s*(.+)", body)
+            if m:
+                usage.append(m.group(1))
+        elif s == "":
+            continue
         else:
-            if s.startswith("#"):
-                out.append(s.lstrip("# "))
-            elif s.startswith("#!/"):
-                continue
-            elif s == "":
-                continue
-            else:
-                break
-        if len(out) >= max_lines:
             break
-    return " ".join(out).strip()
+        if len(comments) >= max_lines:
+            break
+    desc = " ".join(comments).strip()
+    return {"desc": desc, "usage": usage}
 
 
 def bash_syntax_ok(p: Path) -> bool:
@@ -75,10 +74,16 @@ def main():
             return
         for p in sorted(d.glob("*")):
             if p.is_file() and p.suffix.lower() in {".sh", ".ps1"}:
-                purpose = first_comment_lines(p)
+                meta = extract_metadata(p)
                 ok = bash_syntax_ok(p)
                 status = "OK" if ok else "Syntax error (bash -n)"
-                lines.append(f"- `{p.name}` — {purpose or 'No description'} — [{status}]")
+                desc = meta["desc"] or 'No description'
+                lines.append(f"- `{p.name}` — {desc} — [{status}]")
+                if meta["usage"]:
+                    lines.append("  ")
+                    lines.append("  Usage:")
+                    for u in meta["usage"]:
+                        lines.append(f"  - `{u}`")
         lines.append("")
 
     handle_dir(scripts_dir, "Student-Created Scripts (scripts/)")
@@ -92,4 +97,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

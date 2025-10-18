@@ -38,7 +38,43 @@ run_followup() {
 run_polish() {
   "$python_bin" "$ROOT/scripts/portfolio/create_weeks_summary.py" --root "$ROOT" --config "$CONFIG" || true
   "$python_bin" "$ROOT/scripts/portfolio/add_references.py" --root "$ROOT" --config "$CONFIG" || true
-  # CI and repo metadata are optional and skipped if tools are missing
+  # Rebuild docs with refined grouping/metadata
+  "$python_bin" "$ROOT/scripts/portfolio/build_evidence_index.py" --root "$ROOT" --config "$CONFIG" || true
+  "$python_bin" "$ROOT/scripts/portfolio/build_scripts_readme.py" --root "$ROOT" --config "$CONFIG" || true
+  # Add CI workflow if missing
+  wf="$ROOT/.github/workflows/portfolio-ci.yml"
+  mkdir -p "$(dirname "$wf")"
+  if [[ ! -f "$wf" ]]; then
+    cat > "$wf" <<'YML'
+name: Portfolio CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress --exclude-mail --accept 200,206 --verbose '**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: |
+            CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts
+            CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts-extra
+YML
+  fi
 }
 
 case "$phase" in
@@ -69,4 +105,3 @@ if [[ "${PM_COMMIT:-1}" != "0" ]]; then
 fi
 
 echo "Phase '$phase' completed."
-

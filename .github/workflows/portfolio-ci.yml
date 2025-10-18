@@ -1,0 +1,27 @@
+name: Portfolio CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress --exclude-mail --accept 200,206 --verbose '**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: |
+            CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts
+            CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts-extra

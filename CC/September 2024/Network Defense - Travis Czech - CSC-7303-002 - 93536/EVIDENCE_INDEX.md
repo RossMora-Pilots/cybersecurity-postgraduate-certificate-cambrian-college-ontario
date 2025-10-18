@@ -1,0 +1,97 @@
+# Evidence & Screenshots Index
+
+This guide groups screenshots by week/topic and points to their location.
+
+## General — Screenshots
+- Screenshot1_LabSetup.png — see `screenshots/Screenshot1_LabSetup.png`
+- Screenshot3_FirewallConfig.png — see `screenshots/Screenshot3_FirewallConfig.png`
+
+## Week 1 — Labsetup
+- wk1_labsetup_1.png — see `screenshots/wk1_labsetup_1.png`
+
+## Week 10 — Lab6
+- wk10_lab6_1.png — see `screenshots/wk10_lab6_1.png`
+- wk10_lab6_10.png — see `screenshots/wk10_lab6_10.png`
+- wk10_lab6_11.png — see `screenshots/wk10_lab6_11.png`
+- wk10_lab6_12.png — see `screenshots/wk10_lab6_12.png`
+- wk10_lab6_13.png — see `screenshots/wk10_lab6_13.png`
+- wk10_lab6_14.png — see `screenshots/wk10_lab6_14.png`
+- wk10_lab6_15.png — see `screenshots/wk10_lab6_15.png`
+- wk10_lab6_16.png — see `screenshots/wk10_lab6_16.png`
+- wk10_lab6_17.png — see `screenshots/wk10_lab6_17.png`
+- wk10_lab6_18.png — see `screenshots/wk10_lab6_18.png`
+- wk10_lab6_19.png — see `screenshots/wk10_lab6_19.png`
+- wk10_lab6_2.png — see `screenshots/wk10_lab6_2.png`
+- wk10_lab6_20.png — see `screenshots/wk10_lab6_20.png`
+- wk10_lab6_21.png — see `screenshots/wk10_lab6_21.png`
+- wk10_lab6_22.png — see `screenshots/wk10_lab6_22.png`
+- wk10_lab6_23.png — see `screenshots/wk10_lab6_23.png`
+- wk10_lab6_24.png — see `screenshots/wk10_lab6_24.png`
+- wk10_lab6_25.png — see `screenshots/wk10_lab6_25.png`
+- wk10_lab6_26.png — see `screenshots/wk10_lab6_26.png`
+- wk10_lab6_27.png — see `screenshots/wk10_lab6_27.png`
+- wk10_lab6_28.png — see `screenshots/wk10_lab6_28.png`
+- wk10_lab6_29.png — see `screenshots/wk10_lab6_29.png`
+- wk10_lab6_3.png — see `screenshots/wk10_lab6_3.png`
+- wk10_lab6_30.png — see `screenshots/wk10_lab6_30.png`
+- wk10_lab6_31.png — see `screenshots/wk10_lab6_31.png`
+- wk10_lab6_32.png — see `screenshots/wk10_lab6_32.png`
+- wk10_lab6_33.png — see `screenshots/wk10_lab6_33.png`
+- wk10_lab6_34.png — see `screenshots/wk10_lab6_34.png`
+- wk10_lab6_35.png — see `screenshots/wk10_lab6_35.png`
+- wk10_lab6_36.png — see `screenshots/wk10_lab6_36.png`
+- wk10_lab6_37.png — see `screenshots/wk10_lab6_37.png`
+- wk10_lab6_38.png — see `screenshots/wk10_lab6_38.png`
+- wk10_lab6_39.png — see `screenshots/wk10_lab6_39.png`
+- wk10_lab6_4.png — see `screenshots/wk10_lab6_4.png`
+- wk10_lab6_40.png — see `screenshots/wk10_lab6_40.png`
+- wk10_lab6_41.png — see `screenshots/wk10_lab6_41.png`
+- wk10_lab6_42.png — see `screenshots/wk10_lab6_42.png`
+- wk10_lab6_43.png — see `screenshots/wk10_lab6_43.png`
+- wk10_lab6_44.png — see `screenshots/wk10_lab6_44.png`
+- wk10_lab6_45.png — see `screenshots/wk10_lab6_45.png`
+- wk10_lab6_46.png — see `screenshots/wk10_lab6_46.png`
+- wk10_lab6_47.png — see `screenshots/wk10_lab6_47.png`
+- wk10_lab6_48.png — see `screenshots/wk10_lab6_48.png`
+- wk10_lab6_49.png — see `screenshots/wk10_lab6_49.png`
+- wk10_lab6_5.png — see `screenshots/wk10_lab6_5.png`
+- wk10_lab6_50.png — see `screenshots/wk10_lab6_50.png`
+- wk10_lab6_51.png — see `screenshots/wk10_lab6_51.png`
+- wk10_lab6_52.png — see `screenshots/wk10_lab6_52.png`
+- wk10_lab6_53.png — see `screenshots/wk10_lab6_53.png`
+- wk10_lab6_54.png — see `screenshots/wk10_lab6_54.png`
+- wk10_lab6_55.png — see `screenshots/wk10_lab6_55.png`
+- wk10_lab6_56.png — see `screenshots/wk10_lab6_56.png`
+- wk10_lab6_57.png — see `screenshots/wk10_lab6_57.png`
+- wk10_lab6_58.png — see `screenshots/wk10_lab6_58.png`
+- wk10_lab6_59.png — see `screenshots/wk10_lab6_59.png`
+- wk10_lab6_6.png — see `screenshots/wk10_lab6_6.png`
+- wk10_lab6_60.png — see `screenshots/wk10_lab6_60.png`
+- wk10_lab6_61.png — see `screenshots/wk10_lab6_61.png`
+- wk10_lab6_62.png — see `screenshots/wk10_lab6_62.png`
+- wk10_lab6_63.png — see `screenshots/wk10_lab6_63.png`
+- wk10_lab6_64.png — see `screenshots/wk10_lab6_64.png`
+- wk10_lab6_65.png — see `screenshots/wk10_lab6_65.png`
+- wk10_lab6_66.png — see `screenshots/wk10_lab6_66.png`
+- wk10_lab6_67.png — see `screenshots/wk10_lab6_67.png`
+- wk10_lab6_68.png — see `screenshots/wk10_lab6_68.png`
+- wk10_lab6_69.png — see `screenshots/wk10_lab6_69.png`
+- wk10_lab6_7.png — see `screenshots/wk10_lab6_7.png`
+- wk10_lab6_70.png — see `screenshots/wk10_lab6_70.png`
+- wk10_lab6_71.png — see `screenshots/wk10_lab6_71.png`
+- wk10_lab6_72.png — see `screenshots/wk10_lab6_72.png`
+- wk10_lab6_73.png — see `screenshots/wk10_lab6_73.png`
+- wk10_lab6_8.png — see `screenshots/wk10_lab6_8.png`
+- wk10_lab6_9.png — see `screenshots/wk10_lab6_9.png`
+
+## Week 12 — Opnsense
+- wk12_opnsense_1.png — see `screenshots/wk12_opnsense_1.png`
+- wk12_opnsense_2.png — see `screenshots/wk12_opnsense_2.png`
+- wk12_opnsense_3.png — see `screenshots/wk12_opnsense_3.png`
+- wk12_opnsense_4.png — see `screenshots/wk12_opnsense_4.png`
+- wk12_opnsense_5.png — see `screenshots/wk12_opnsense_5.png`
+- wk12_opnsense_6.png — see `screenshots/wk12_opnsense_6.png`
+- wk12_opnsense_7.png — see `screenshots/wk12_opnsense_7.png`
+- wk12_opnsense_8.png — see `screenshots/wk12_opnsense_8.png`
+- wk12_opnsense_9.png — see `screenshots/wk12_opnsense_9.png`
+
