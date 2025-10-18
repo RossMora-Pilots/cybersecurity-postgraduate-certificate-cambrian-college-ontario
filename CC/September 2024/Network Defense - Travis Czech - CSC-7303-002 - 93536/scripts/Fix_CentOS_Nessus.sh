@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: sudo ./Fix_CentOS_Nessus.sh
 # Fix_CentOS_Nessus.sh – Address Nessus-reported vulnerabilities on CentOS
 # Machine-specific check
 if [[ "$(hostname)" != "localhost.localdomain" ]]; then

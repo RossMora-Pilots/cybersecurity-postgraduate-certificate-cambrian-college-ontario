@@ -1,4 +1,5 @@
 # Cybersecurity Postgraduate Certificate – Cambrian College (Portfolio)
+[![Portfolio CI](https://github.com/RossMora/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/RossMora/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml)
 
 This public portfolio showcases coursework and hands-on projects completed as part of the **Cybersecurity Postgraduate Certificate** at Cambrian College (Ontario), following completion of a previous Bachelor of Applied Information Systems Technology (BAIST) program at the Northern Alberta Institute of Technology, Edmonton, Alberta. 
 
@@ -72,3 +73,11 @@ Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - C
 - Linux/Windows Hardening
 - Bash & PowerShell Automation
 <!-- PORTFOLIO: SKILLS END -->
+
+## Start Here
+- Midterm Project Summary: CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/MIDTERM_PROJECT_SUMMARY.md
+- Final Exam Vulnerability Assessment: CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/FINAL_EXAM_VULNERABILITY_ASSESSMENT.md
+
+## References (Selected)
+- Wazuh Documentation: https://documentation.wazuh.com/
+- Nessus Product Page: https://www.tenable.com/products/nessus

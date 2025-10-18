@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: sudo ./VulnerableUbuntu.sh
 # Intentionally Vulnerable Script for Ubuntu 24.04
 # Use ONLY in an isolated educational lab environment!
 # Run as root or with sudo privileges.

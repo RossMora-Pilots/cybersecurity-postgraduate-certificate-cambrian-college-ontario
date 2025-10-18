@@ -34,3 +34,18 @@ This project hardened a multi-VM environment (Windows Server 2022, Windows 11, U
 ### What This Demonstrates
 - Multi-system security engineering, automation, and verification
 
+### Key Metrics
+| Metric | Value |
+|-------|-------|
+| Course Grade | 93/100 |
+| Systems Hardened | 7 |
+| GPO Policies Configured | 50+ |
+
+### Evidence Links
+- See assignments/ PDFs for lab deliverables
+- See scripts/ for automation and remediation
+- See screenshots/ for configuration and results
+- Before/After examples:
+  - OPNsense dashboard: screenshots/wk12_opnsense_5.png
+  - Lab 6 validation: screenshots/wk10_lab6_12.png
+  - Lab setup: screenshots/Screenshot1_LabSetup.png
