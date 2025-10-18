@@ -48,4 +48,4 @@ This project hardened a multi-VM environment (Windows Server 2022, Windows 11, U
 - Before/After examples:
   - OPNsense dashboard: screenshots/wk12_opnsense_5.png
   - Lab 6 validation: screenshots/wk10_lab6_12.png
-  - Lab setup: screenshots/Screenshot1_LabSetup.png
+  - Lab setup: screenshots/wk01_labsetup_1.png

@@ -18,55 +18,55 @@ It is written for a public audience (hiring managers, technical peers) and inclu
 - Built a multi-VM lab: Windows Server 2022 (future DC), Windows 11, Ubuntu 24, CentOS 9, Kali, and a pfSense/OPNsense gateway.
 - Configured internal LAN (e.g., `192.168.1.0/24`) with DNS/DHCP as needed; verified host-to-host and gateway connectivity.
 - Established firewall defaults: deny inbound, allow necessary outbound; confirmed traffic paths with ping and basic tools.
-- **Evidence:** see `screenshots/Screenshot1_LabSetup.png`.
+- **Evidence:** see [screenshots/wk01_labsetup_1.png](screenshots/wk01_labsetup_1.png).
 
 ## Week 2 — Active Directory & Domain Join
 - Promoted Windows Server 2022 to a Domain Controller (AD DS + DNS); created domain (e.g., `LAB.LOCAL`), OUs, and test users.
 - Joined Windows 11 to the domain; verified domain logon and GPMC visibility.
-- **Evidence:** `screenshots/Screenshot2_ADDomain.png`.
+- **Evidence:** [screenshots/Screenshot2_ADDomain.png](screenshots/Screenshot2_ADDomain.png).
 
 ## Week 3 — Perimeter & Host Firewall Policies
 - Tuned gateway firewall to block unused services and explicitly allow required ones (e.g., RDP only from management host).
 - Enabled Windows Defender Firewall for all profiles; pruned unnecessary services (e.g., removed SMBv1, Telnet).
-- **Evidence:** `screenshots/Screenshot3_FirewallConfig.png`.
+- **Evidence:** [screenshots/Screenshot3_FirewallConfig.png](screenshots/Screenshot3_FirewallConfig.png).
 
 ## Week 4 — Linux Hardening (Ubuntu/CentOS)
 - Applied updates (`apt`, `dnf/yum`), enabled UFW/firewalld with default deny, allowed only required services (SSH/HTTP).
 - Secured SSH: no root login, prefer keys; installed Fail2Ban on Ubuntu.
-- **Evidence:** `screenshots/Screenshot4_LinuxFirewall.png`.
+- **Evidence:** [screenshots/Screenshot4_LinuxFirewall.png](screenshots/Screenshot4_LinuxFirewall.png).
 
 ## Week 5 — Data-at-Rest Protection
 - **Windows 11:** Enabled BitLocker (with group policy to allow w/out TPM in VM lab); stored recovery key securely.  
 - **CentOS:** Created LUKS file-backed encrypted volume, mounted under `/mnt/encrypted` for sensitive data.  
-- **Evidence:** `screenshots/Screenshot5_BitLocker.png`, `screenshots/Screenshot6_LUKSsetup.png`.
+- **Evidence:** [screenshots/Screenshot5_BitLocker.png](screenshots/Screenshot5_BitLocker.png), [screenshots/Screenshot6_LUKSsetup.png](screenshots/Screenshot6_LUKSsetup.png).
 
 ## Week 6 — Vulnerability Assessment (Nessus + Nmap)
 - Ran credentialed Nessus scans on Linux hosts; correlated with Nmap service/version detection.
 - Findings guided remediation (e.g., SSH hardening, close 4444, patch Apache/Suricata).
-- **Evidence:** `screenshots/Screenshot7_NessusScan.png`.
+- **Evidence:** [screenshots/Screenshot7_NessusScan.png](screenshots/Screenshot7_NessusScan.png).
 
 ## Week 7 — Ubuntu Remediation via Automation
 - Authored two Bash scripts to fix Nessus/Nmap findings on Ubuntu (see **Appendix**):  
   - `Fix_Ubuntu_Nessus.sh`  
   - `Fix_Ubuntu_Nmap.sh`
 - Post-fix Nmap verified closed ports and disabled HTTP TRACE/TRACK.
-- **Evidence:** `screenshots/Screenshot8_UbuntuFixScript.png`.
+- **Evidence:** [screenshots/Screenshot8_UbuntuFixScript.png](screenshots/Screenshot8_UbuntuFixScript.png).
 
 ## Week 8 — CentOS Remediation via Automation
 - Authored two Bash scripts to fix Nessus/Nmap findings on CentOS (see **Appendix**):  
   - `Fix_CentOS_Nessus.sh`  
   - `Fix_CentOS_Nmap.sh`
 - Ensured `firewalld` running, hardened httpd headers, restricted services; re-scan confirmed minimal exposure.
-- **Evidence:** `screenshots/Screenshot9_CentOSFixScript.png`.
+- **Evidence:** [screenshots/Screenshot9_CentOSFixScript.png](screenshots/Screenshot9_CentOSFixScript.png).
 
 ## Week 9 — Patch & Config Management (Endpoint Central + Ansible)
 - Installed ManageEngine Endpoint Central; deployed agents; executed Windows/Linux patch tasks.  
 - Provisioned WSL + Ubuntu; used **Ansible** to enforce security state across Linux hosts (idempotent changes).  
-- **Evidence:** `screenshots/Screenshot10_ManageEngine.png`, `screenshots/Screenshot11_AnsiblePlaybook.png`.
+- **Evidence:** [screenshots/Screenshot10_ManageEngine.png](screenshots/Screenshot10_ManageEngine.png), [screenshots/Screenshot11_AnsiblePlaybook.png](screenshots/Screenshot11_AnsiblePlaybook.png).
 
 ## Week 10 — OpenVAS (Greenbone) on Kali + Auto-Updates
 - Added `kali_update.sh` and nightly cron for auto-updates; installed OpenVAS via script; ran authenticated network scans.  
-- **Evidence:** `screenshots/Screenshot12_KaliCron.png`, `screenshots/Screenshot13_OpenVAS.png`.
+- **Evidence:** [screenshots/Screenshot12_KaliCron.png](screenshots/Screenshot12_KaliCron.png), [screenshots/Screenshot13_OpenVAS.png](screenshots/Screenshot13_OpenVAS.png).
 
 ## Weeks 11–12 — Final Project (Capstone)
 - Hardened a multi-VM scenario end-to-end; verified with Nessus/OpenVAS; documented initial vs. final state.  
