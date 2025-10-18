@@ -1,0 +1,33 @@
+{
+  "course_path": "CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536",
+  "metrics": {
+    "grade": 93,
+    "remediation_rate": 95.7,
+    "systems_hardened": 7,
+    "gpo_count": 50
+  },
+  "evidence": {
+    "midterm": [
+      "screenshots/Screenshot1_LabSetup.png",
+      "screenshots/wk12_opnsense_5.png",
+      "screenshots/wk10_lab6_12.png"
+    ],
+    "final": [
+      "assignments/6_Escalate_Win VM_Ross_Moravec_A00322717_Midterm_Project_CSC7303_93536.pdf",
+      "screenshots/wk10_lab6_52.png"
+    ]
+  },
+  "skills": [
+    "Network Security",
+    "Active Directory & GPO",
+    "Vulnerability Management (Nessus/Nmap)",
+    "SIEM (Wazuh)",
+    "Linux/Windows Hardening",
+    "Bash & PowerShell Automation"
+  ],
+  "references": [
+    {"title": "Wazuh Documentation", "url": "https://documentation.wazuh.com/"},
+    {"title": "Nessus Product Page", "url": "https://www.tenable.com/products/nessus"}
+  ]
+}
+

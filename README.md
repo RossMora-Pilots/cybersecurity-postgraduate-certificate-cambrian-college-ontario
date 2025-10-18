@@ -27,3 +27,48 @@ CC/
 
 ## Quick Links
 - [Network Defense – September 2024](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md)
+
+<!-- PORTFOLIO: QUICK_START START -->
+🚀 QUICK START FOR HIRING MANAGERS
+
+If you have 5 minutes:
+→ Read: Key Achievements (below)
+→ View: 2–3 screenshots in `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/screenshots/`
+
+If you have 15 minutes:
+→ Explore: Midterm and Final writeups in `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536`
+→ Review: Scripts in `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts/`
+
+If you have 30 minutes:
+→ Deep dive: Weeks 4–7 hardening, Week 10–12 SIEM/vuln work
+<!-- PORTFOLIO: QUICK_START END -->
+
+<!-- PORTFOLIO: ACHIEVEMENTS START -->
+**Quantified Results:**
+
+• Course Grade: 93/100
+• Vulnerability Remediation Rate: 95.7%
+• Systems Hardened: 7 VMs
+• GPO Policies Configured: 50+
+
+Tools: Nessus, Nmap, Wazuh, AD/GPO, OPNsense, Bash, PowerShell
+<!-- PORTFOLIO: ACHIEVEMENTS END -->
+
+<!-- PORTFOLIO: NAVIGATION START -->
+📁 How to Review This Portfolio
+
+Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536`
+• Start Here: `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/README.md`
+• Assignments: `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/assignments/` (PDFs)
+• Scripts: `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts/` and `scripts-extra/`
+• Evidence: `CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/screenshots/`
+<!-- PORTFOLIO: NAVIGATION END -->
+
+<!-- PORTFOLIO: SKILLS START -->
+- Network Security
+- Active Directory & GPO
+- Vulnerability Management (Nessus/Nmap)
+- SIEM (Wazuh)
+- Linux/Windows Hardening
+- Bash & PowerShell Automation
+<!-- PORTFOLIO: SKILLS END -->
