@@ -48,7 +48,7 @@ def main():
     lines = [
         "# Evidence & Screenshots Index",
         "",
-        "This guide groups screenshots by week/topic and points to their location.",
+        "This guide groups screenshots by week/topic and links each image with a short caption.",
         "",
     ]
 
@@ -56,10 +56,32 @@ def main():
     if not groups:
         lines.append("_No screenshots directory found._")
     else:
+        # Simple caption heuristics
+        def caption_for(name: str) -> str:
+            low = name.lower()
+            if 'labsetup' in low:
+                return 'Lab topology and VM setup verification'
+            if 'opnsense' in low:
+                return 'OPNsense dashboard/rules configuration'
+            if 'lab6' in low:
+                return 'Week 10 Lab 6 remediation/validation'
+            if 'nessus' in low:
+                return 'Nessus scan results/evidence'
+            if 'nmap' in low:
+                return 'Nmap validation/evidence'
+            if 'openvas' in low:
+                return 'OpenVAS/Greenbone evidence'
+            if 'manageengine' in low or 'endpoint' in low:
+                return 'Endpoint Central patch/config evidence'
+            if 'wazuh' in low:
+                return 'Wazuh SIEM dashboard/alerts'
+            return 'Evidence snapshot'
+
         for section in sorted(groups.keys(), key=lambda s: (s.startswith('Misc'), s)):
             lines.append(f"## {section}")
             for name in groups[section]:
-                lines.append(f"- {name} — see `screenshots/{name}`")
+                cap = caption_for(name)
+                lines.append(f"- [{name}](screenshots/{name}) — {cap}")
             lines.append("")
 
     ensure_parent(out)

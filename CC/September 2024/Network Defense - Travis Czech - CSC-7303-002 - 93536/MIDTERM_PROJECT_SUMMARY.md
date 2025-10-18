@@ -49,3 +49,20 @@ This project hardened a multi-VM environment (Windows Server 2022, Windows 11, U
   - OPNsense dashboard: screenshots/wk12_opnsense_5.png
   - Lab 6 validation: screenshots/wk10_lab6_12.png
   - Lab setup: screenshots/wk01_labsetup_1.png
+
+### Architecture Diagram
+```mermaid
+flowchart LR
+  Client[Client] --> OPNsense(OPNsense FW)
+  OPNsense --> DC[Windows Server 2022 DC]
+  OPNsense --> Ubuntu[Ubuntu]
+  OPNsense --> CentOS[CentOS]
+  Ubuntu --> Wazuh[Wazuh]
+  CentOS --> Wazuh
+```
+```
+ASCII
+Client -> OPNsense -> DC
+                 -> Ubuntu -> Wazuh
+                 -> CentOS -> Wazuh
+```

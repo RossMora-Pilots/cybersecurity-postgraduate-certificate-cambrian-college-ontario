@@ -77,16 +77,25 @@ YML
   fi
 }
 
+run_enhance() {
+  "$python_bin" "$ROOT/scripts/portfolio/add_architecture_diagrams.py" --root "$ROOT" --config "$CONFIG" || true
+  "$python_bin" "$ROOT/scripts/portfolio/add_learning_reflection.py" --root "$ROOT" --config "$CONFIG" || true
+  "$python_bin" "$ROOT/scripts/portfolio/add_root_highlights.py" --root "$ROOT" || true
+  "$python_bin" "$ROOT/scripts/portfolio/build_evidence_index.py" --root "$ROOT" --config "$CONFIG" || true
+}
+
 case "$phase" in
   immediate) run_immediate ;;
   short) run_short ;;
   followup) run_followup ;;
   polish) run_polish ;;
+  enhance) run_enhance ;;
   all)
     run_immediate
     run_short
     run_followup
     run_polish || true
+    run_enhance || true
     ;;
   *) echo "Unknown phase: $phase" >&2; exit 2 ;;
 esac

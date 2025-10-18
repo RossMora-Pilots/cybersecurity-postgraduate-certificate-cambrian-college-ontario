@@ -74,6 +74,11 @@ It is written for a public audience (hiring managers, technical peers) and inclu
 
 ---
 
+## Learning Reflection
+- Iterative remediation beats one-shot fixes: scanning, patching, and re-scanning produced measurable improvements and prevented regressions.
+- Security vs. usability tradeoffs: tightened policies (e.g., SSH/WinRM) while preserving required functionality by scoping and testing changes.
+- Observability matters: Wazuh and scan artifacts turned guesses into evidence, enabling data-driven decisions and faster troubleshooting.
+
 # Appendix A — Scripts (Embedded)
 
 > Copies of all scripts used in the labs. The same files exist in `./scripts/` for execution.
