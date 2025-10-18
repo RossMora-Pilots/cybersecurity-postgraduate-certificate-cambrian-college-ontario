@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash Fix_Ubuntu_Nmap.sh
 # Usage: sudo ./Fix_Ubuntu_Nmap.sh
 # Fix_Ubuntu_Nmap.sh – Script to address vulnerabilities identified by Nmap on Ubuntu
 # Ensure the script is run on the correct system

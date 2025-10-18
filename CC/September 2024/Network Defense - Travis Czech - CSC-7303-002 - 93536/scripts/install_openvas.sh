@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash install_openvas.sh
 # Usage: sudo ./install_openvas.sh
 # install_openvas.sh – Automates OpenVAS installation and setup on Kali
 set -e

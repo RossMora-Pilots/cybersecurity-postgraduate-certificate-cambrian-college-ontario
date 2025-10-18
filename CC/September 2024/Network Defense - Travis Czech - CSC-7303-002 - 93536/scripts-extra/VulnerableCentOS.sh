@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash VulnerableCentOS.sh
 # Usage: sudo ./VulnerableCentOS.sh
 # Intentionally Vulnerable Script for CentOS Stream 9
 # Use ONLY in an isolated educational lab environment!

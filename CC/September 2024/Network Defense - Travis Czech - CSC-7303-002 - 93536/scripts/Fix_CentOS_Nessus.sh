@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash Fix_CentOS_Nessus.sh
 # Usage: sudo ./Fix_CentOS_Nessus.sh
 # Fix_CentOS_Nessus.sh – Address Nessus-reported vulnerabilities on CentOS
 # Machine-specific check

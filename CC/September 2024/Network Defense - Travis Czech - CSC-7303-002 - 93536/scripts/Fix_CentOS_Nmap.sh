@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash Fix_CentOS_Nmap.sh
 # Usage: sudo ./Fix_CentOS_Nmap.sh
 # Fix_CentOS_Nmap.sh – Address Nmap-identified issues on CentOS
 # Machine-specific check

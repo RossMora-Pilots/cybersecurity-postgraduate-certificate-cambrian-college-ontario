@@ -6,6 +6,12 @@ It is written for a public audience (hiring managers, technical peers) and inclu
 > **Screenshots** live in `./screenshots/`.  
 > **Scripts** live in `./scripts/` and are embedded below in the **Appendix**.
 
+
+## Start Here
+- Midterm Project Summary → MIDTERM_PROJECT_SUMMARY.md
+- Final Exam: Vulnerability Assessment → FINAL_EXAM_VULNERABILITY_ASSESSMENT.md
+- Evidence & Screenshots Index → EVIDENCE_INDEX.md
+- Scripts Overview → SCRIPTS_README.md
 ---
 
 ## Week 1 — Lab Environment Setup & Network Fundamentals

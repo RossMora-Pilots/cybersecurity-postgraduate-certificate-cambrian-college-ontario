@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash Fix_Ubuntu_Nessus.sh
 # Usage: sudo ./Fix_Ubuntu_Nessus.sh
 # Fix_Ubuntu_Nessus.sh – Script to address vulnerabilities identified by Nessus on Ubuntu
 # Machine-Specific Precheck

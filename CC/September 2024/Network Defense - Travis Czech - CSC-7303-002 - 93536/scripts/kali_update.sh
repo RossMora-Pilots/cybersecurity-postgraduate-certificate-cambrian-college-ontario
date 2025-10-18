@@ -1,4 +1,5 @@
 #!/bin/bash
+# Usage: bash kali_update.sh
 # Usage: sudo ./kali_update.sh
 # kali_update.sh — nightly updates for Kali
 set -e
