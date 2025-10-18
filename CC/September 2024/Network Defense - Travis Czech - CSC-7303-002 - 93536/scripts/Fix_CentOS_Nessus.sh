@@ -27,12 +27,16 @@ chmod 600 /etc/shadow || handle_error "Failed to set permissions for /etc/shadow
 echo "File permissions corrected."
 # 3. Update Apache HTTP Server
 echo "Updating Apache HTTP server..."
-yum clean all && yum update -y httpd || handle_error "Failed to update Apache HTTP server"
+if ! (yum clean all && yum update -y httpd); then
+    handle_error "Failed to update Apache HTTP server"
+fi
 echo "Apache HTTP server updated."
 # 4. Update FFmpeg
 echo "Updating FFmpeg..."
 if rpm -q ffmpeg; then
-    yum clean all && yum update -y ffmpeg || handle_error "Failed to update FFmpeg"
+    if ! (yum clean all && yum update -y ffmpeg); then
+        handle_error "Failed to update FFmpeg"
+    fi
 else
     echo "FFmpeg not installed. Skipping update."
 fi
@@ -52,7 +56,9 @@ echo "SSH configuration secured."
 # 7. Upgrade Suricata
 echo "Updating Suricata..."
 if rpm -q suricata; then
-    yum clean all && yum update -y suricata || handle_error "Failed to update Suricata"
+    if ! (yum clean all && yum update -y suricata); then
+        handle_error "Failed to update Suricata"
+    fi
 else
     echo "Suricata not installed. Skipping update."
 fi
