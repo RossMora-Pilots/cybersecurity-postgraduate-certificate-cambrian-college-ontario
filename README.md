@@ -25,6 +25,7 @@ CC/
 ---
 
 © 2025 Ross Moravec. See [LICENSE](LICENSE) for usage.
+- Weekly Portfolio (PDF) → CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/WEEKLY_PORTFOLIO.pdf
 
 ## Quick Links
 - [Network Defense – September 2024](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md)
