@@ -128,11 +128,12 @@ It is written for a public audience (hiring managers, technical peers) and inclu
 - Security vs. usability tradeoffs: tightened policies (e.g., SSH/WinRM) while preserving required functionality by scoping and testing changes.
 - Observability matters: Wazuh and scan artifacts turned guesses into evidence, enabling data-driven decisions and faster troubleshooting.
 
-# Appendix A — Scripts (Embedded)
+## Appendix A — Scripts (Embedded)
 
 > Copies of all scripts used in the labs. The same files exist in `./scripts/` for execution.
 
 ## `scripts/Fix_Ubuntu_Nessus.sh`
+
 ```bash
 #!/bin/bash
 # Fix_Ubuntu_Nessus.sh – Script to address vulnerabilities identified by Nessus on Ubuntu
@@ -178,6 +179,7 @@ echo "Fix_Ubuntu_Nessus.sh completed. Review logs for any errors."
 ```
 
 ## `scripts/Fix_Ubuntu_Nmap.sh`
+
 ```bash
 #!/bin/bash
 # Fix_Ubuntu_Nmap.sh – Script to address vulnerabilities identified by Nmap on Ubuntu
@@ -229,6 +231,7 @@ echo "Fix_Ubuntu_Nmap.sh completed. Please verify changes and re-run Nmap for va
 ```
 
 ## `scripts/Fix_CentOS_Nessus.sh`
+
 ```bash
 #!/bin/bash
 # Fix_CentOS_Nessus.sh – Address Nessus-reported vulnerabilities on CentOS
@@ -293,6 +296,7 @@ exit 0
 ```
 
 ## `scripts/Fix_CentOS_Nmap.sh`
+
 ```bash
 #!/bin/bash
 # Fix_CentOS_Nmap.sh – Address Nmap-identified issues on CentOS
