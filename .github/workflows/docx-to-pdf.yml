@@ -47,5 +47,7 @@ jobs:
           git config user.name "GitHub Actions"
           git add "$PDF"
           git rm "$DOCX"
-          git commit -m "docs: replace DOCX with PDF ($DOCX -> $PDF)"
+          BASENAME=$(basename "$DOCX")
+          git commit -m "docs(docx2pdf): convert ${BASENAME%.docx}.docx to PDF; remove DOCX" \
+                      -m "Why: Provide finalized, GitHub-viewable artifacts. Files: $BASENAME -> ${BASENAME%.docx}.pdf"
           git push

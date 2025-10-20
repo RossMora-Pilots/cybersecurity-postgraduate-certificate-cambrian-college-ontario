@@ -23,3 +23,8 @@ node_modules/
 *.zip
 *.7z
 *.rar
+# Archives and images
+*.dmg
+# OS files
+# Sessions / temp
+*.session
