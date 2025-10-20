@@ -105,8 +105,37 @@ if [[ "${PM_COMMIT:-1}" != "0" ]]; then
   cd "$ROOT"
   if ! git diff --quiet; then
     git add -A
-    msg="docs(portfolio): automated updates for phase '$phase'"
-    git -c user.email="codex-bot@local" -c user.name="Codex Bot" commit -m "$msg" || true
+    # Compose a more descriptive commit message by phase
+    case "$phase" in
+      immediate)
+        msg_subject="docs(root,course): add Quick Start/Achievements/Navigation/Skills; regenerate assignments index"
+        msg_body="Why: Improve recruiter-first scan and navigability.\nPhase: immediate"
+        ;;
+      short)
+        msg_subject="docs(course): add Midterm + Final writeups with metrics and evidence links"
+        msg_body="Why: Surface quantified results (grade, remediation) and capstone depth.\nPhase: short"
+        ;;
+      followup)
+        msg_subject="docs(course): add Evidence Index + Scripts README with usage; validate scripts"
+        msg_body="Why: Provide context for evidence and executable scripts with usage.\nPhase: followup"
+        ;;
+      polish)
+        msg_subject="docs(course,ci): add Weeks 4–7 summary + References; add CI; rebuild evidence/scripts docs"
+        msg_body="Why: Improve completeness and automated validation.\nPhase: polish"
+        ;;
+      enhance)
+        msg_subject="docs(root,course): add architecture diagrams + learning reflection + highlights; expand evidence captions"
+        msg_body="Why: Add narrative depth and faster entry points for reviewers.\nPhase: enhance"
+        ;;
+      *)
+        msg_subject="docs(portfolio): update generated artifacts"
+        msg_body="Phase: $phase"
+        ;;
+    esac
+    # Append a short list of staged file categories
+    changed=$(git diff --cached --name-only | sed -n '1,50p')
+    git -c user.email="codex-bot@local" -c user.name="Codex Bot" \
+      commit -m "$msg_subject" -m "$msg_body" -m "Files:\n$changed" || true
     if [[ "${PM_PUSH:-0}" == "1" ]]; then
       git push origin "${PORTFOLIO_BRANCH:-main}" || true
     fi

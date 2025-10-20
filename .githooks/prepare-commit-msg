@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+MSG_FILE="$1"
+# Only prefill on empty commit messages and when not using -m
+if [ -s "$MSG_FILE" ]; then exit 0; fi
+TEMPLATE=".gitmessage.txt"
+if [ -f "$TEMPLATE" ]; then
+  cp "$TEMPLATE" "$MSG_FILE"
+fi

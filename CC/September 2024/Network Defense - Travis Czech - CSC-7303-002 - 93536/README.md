@@ -3,6 +3,12 @@
 This formal portfolio presents what I learned and built week-by-week in **CSC-7303 Network Defense**.  
 It is written for a public audience (hiring managers, technical peers) and includes inline references to screenshots and full scripts.
 
+<!-- Hero images: quick visual proof for reviewers -->
+<p align="center">
+  <img src="screenshots/wk12_opnsense_5.png" alt="OPNsense Dashboard" width="46%"/>
+  <img src="screenshots/wk10_lab6_30.png" alt="Validation Re-scan" width="46%"/>
+</p>
+
 > **Screenshots** live in `./screenshots/`.  
 > **Scripts** live in `./scripts/` and are embedded below in the **Appendix**.
 
@@ -13,6 +19,29 @@ It is written for a public audience (hiring managers, technical peers) and inclu
 - Evidence & Screenshots Index → EVIDENCE_INDEX.md
 - Scripts Overview → SCRIPTS_README.md
 ---
+
+## Table of Contents
+- [Week 1 — Lab Environment Setup & Network Fundamentals](#week-1--lab-environment-setup--network-fundamentals)
+- [Week 2 — Active Directory & Domain Join](#week-2--active-directory--domain-join)
+- [Week 3 — Perimeter & Host Firewall Policies](#week-3--perimeter--host-firewall-policies)
+- [Week 4 — Linux Hardening (Ubuntu/CentOS)](#week-4--linux-hardening-ubuntucentos)
+- [Week 5 — Data-at-Rest Protection](#week-5--data-at-rest-protection)
+- [Week 6 — Vulnerability Assessment (Nessus + Nmap)](#week-6--vulnerability-assessment-nessus--nmap)
+- [Week 7 — Ubuntu Remediation via Automation](#week-7--ubuntu-remediation-via-automation)
+- [Week 8 — CentOS Remediation via Automation](#week-8--centos-remediation-via-automation)
+- [Week 9 — Patch & Config Management (Endpoint Central + Ansible)](#week-9--patch--config-management-endpoint-central--ansible)
+- [Week 10 — OpenVAS (Greenbone) on Kali + Auto-Updates](#week-10--openvas-greenbone-on-kali--auto-updates)
+- [Weeks 11–12 — Final Project (Capstone)](#weeks-1112--final-project-capstone)
+
+## Skills → Roles (at a glance)
+- SOC Tier‑1/2: triage Wazuh alerts, enrich indicators, escalate with evidence
+- Vulnerability Mgmt: baselines; scan (Nmap/Nessus/OpenVAS); prioritize; verify remediation
+- Network Security: segmentation; firewall policies (OPNsense); IDS rules; packet analysis
+- Platform Hardening: Windows (GPO/Defender), Linux (CIS‑style changes), scripted patches
+
+## Outcomes (What this proves)
+- Midterm: Deployed gateway + AD + SIEM; closed top CVEs and verified via rescans
+- Final: Hardened Ubuntu/CentOS/WinServer; converted critical findings to informational after remediation
 
 ## Week 1 — Lab Environment Setup & Network Fundamentals
 - Built a multi-VM lab: Windows Server 2022 (future DC), Windows 11, Ubuntu 24, CentOS 9, Kali, and a pfSense/OPNsense gateway.

@@ -1,0 +1,14 @@
+type(scope): concise subject (max 72 chars)
+
+Why
+- Briefly state the reason/motivation for this change.
+
+What
+- Key changes (files/areas touched)
+- Outcomes (e.g., improved navigation, added metrics)
+
+Notes
+- Links or references (optional)
+
+BREAKING CHANGES
+- (if any)
