@@ -17,6 +17,7 @@ CC/
 > **Note:** Screenshots are referenced in the course README and should be placed in the `screenshots/` folder.
 
 ## Highlights
+
 - Week-by-week technical breakdowns (tools, configs, labs, reflections)
 - Real scripts (Bash) for Linux/Windows-adjacent hardening and automation
 - Vulnerability assessment workflow (Nmap, Nessus, OpenVAS/Greenbone)
@@ -25,9 +26,11 @@ CC/
 ---
 
 © 2025 Ross Moravec. See [LICENSE](LICENSE) for usage.
+
 - Weekly Portfolio (PDF) → CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/WEEKLY_PORTFOLIO.pdf
 
 ## Quick Links
+
 - [Network Defense – September 2024](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md)
 
 <!-- PORTFOLIO: QUICK_START START -->
@@ -76,9 +79,11 @@ Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - C
 <!-- PORTFOLIO: SKILLS END -->
 
 ## Start Here
+
 - Midterm Project Summary: CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/MIDTERM_PROJECT_SUMMARY.md
 - Final Exam Vulnerability Assessment: CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/FINAL_EXAM_VULNERABILITY_ASSESSMENT.md
 
 ## References (Selected)
-- Wazuh Documentation: https://documentation.wazuh.com/
-- Nessus Product Page: https://www.tenable.com/products/nessus
+
+- Wazuh Documentation: <https://documentation.wazuh.com/>
+- Nessus Product Page: <https://www.tenable.com/products/nessus>
