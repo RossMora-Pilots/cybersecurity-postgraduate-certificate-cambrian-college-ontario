@@ -344,6 +344,7 @@ echo "Fix_CentOS_Nmap.sh completed. Please re-run Nmap to validate fixes."
 ```
 
 ## `scripts/kali_update.sh`
+
 ```bash
 #!/bin/bash
 # kali_update.sh — nightly updates for Kali
@@ -355,6 +356,7 @@ echo "[kali_update] Completed at $(date)"
 ```
 
 ## `scripts/install_openvas.sh`
+
 ```bash
 #!/bin/bash
 # install_openvas.sh – Automates OpenVAS installation and setup on Kali
@@ -368,7 +370,7 @@ echo "OpenVAS installation and setup complete."
 
 ---
 
-# Appendix B — Screenshots Index
+## Appendix B — Screenshots Index
 
 > Place the following (or similarly named) files in `./screenshots/`
 
@@ -386,9 +388,8 @@ echo "OpenVAS installation and setup complete."
 - Screenshot12_KaliCron.png
 - Screenshot13_OpenVAS.png
 
-\n## Assignments Index
+## Assignments Index
 <!-- AUTO-GENERATED: Assignments Index START -->
-- [.pdf](assignments/.pdf)
 - [Lab_2.pdf](assignments/Lab_2.pdf)
 - [Lab_3.pdf](assignments/Lab_3.pdf)
 - [Lab_4_Implementing_Network_Security_Measures.pdf](assignments/Lab_4_Implementing_Network_Security_Measures.pdf)
