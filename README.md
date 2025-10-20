@@ -79,6 +79,14 @@ Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - C
 - Bash & PowerShell Automation
 <!-- PORTFOLIO: SKILLS END -->
 
+## Skills → Roles (at a glance)
+
+- SOC Tier‑1/2: triage Wazuh alerts, enrich indicators, escalate with evidence
+- Vulnerability Mgmt: baselines; scan (Nmap/Nessus/OpenVAS); prioritize; verify remediation
+- Network Security: segmentation; firewall policies (OPNsense); IDS rules; packet analysis
+- Platform Hardening: Windows (GPO/Defender), Linux (CIS‑style changes), scripted patches
+
+
 ## Start Here
 
 - Midterm Project Summary: CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/MIDTERM_PROJECT_SUMMARY.md

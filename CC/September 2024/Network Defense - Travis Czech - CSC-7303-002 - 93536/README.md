@@ -9,6 +9,10 @@ It is written for a public audience (hiring managers, technical peers) and inclu
   <img src="screenshots/wk10_lab6_30.png" alt="Validation Re-scan" width="46%"/>
 </p>
 
+
+<p align="center"><em>Left: OPNsense dashboard</em> &nbsp;&nbsp; <em>Right: Validation re-scan</em></p>
+
+
 > **Screenshots** live in `./screenshots/`.  
 > **Scripts** live in `./scripts/` and are embedded below in the **Appendix**.
 
