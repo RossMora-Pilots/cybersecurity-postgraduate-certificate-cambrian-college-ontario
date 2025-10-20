@@ -9,13 +9,10 @@ It is written for a public audience (hiring managers, technical peers) and inclu
   <img src="screenshots/wk10_lab6_30.png" alt="Validation Re-scan" width="46%"/>
 </p>
 
-
 <p align="center"><em>Left: OPNsense dashboard</em> &nbsp;&nbsp; <em>Right: Validation re-scan</em></p>
-
 
 > **Screenshots** live in `./screenshots/`.  
 > **Scripts** live in `./scripts/` and are embedded below in the **Appendix**.
-
 
 ## Start Here
 
@@ -23,6 +20,7 @@ It is written for a public audience (hiring managers, technical peers) and inclu
 - Final Exam: Vulnerability Assessment → FINAL_EXAM_VULNERABILITY_ASSESSMENT.md
 - Evidence & Screenshots Index → EVIDENCE_INDEX.md
 - Scripts Overview → SCRIPTS_README.md
+
 ---
 
 ## Table of Contents
@@ -413,7 +411,9 @@ echo "OpenVAS installation and setup complete."
 - Screenshot13_OpenVAS.png
 
 ## Assignments Index
+
 <!-- AUTO-GENERATED: Assignments Index START -->
+
 - [Lab_2.pdf](assignments/Lab_2.pdf)
 - [Lab_3.pdf](assignments/Lab_3.pdf)
 - [Lab_4_Implementing_Network_Security_Measures.pdf](assignments/Lab_4_Implementing_Network_Security_Measures.pdf)
@@ -431,9 +431,12 @@ echo "OpenVAS installation and setup complete."
 - [Week06_Escalate_Win_VM_Midterm_Project.pdf](assignments/Week06_Escalate_Win_VM_Midterm_Project.pdf)
 - [Week07_Security_Plan_Midterm_Project.pdf](assignments/Week07_Security_Plan_Midterm_Project.pdf)
 - [Week08_Formal_Report_Midterm_Project.pdf](assignments/Week08_Formal_Report_Midterm_Project.pdf)
+
 <!-- AUTO-GENERATED: Assignments Index END -->
 
 <!-- PORTFOLIO: REFERENCES START -->
+
 - [Wazuh Documentation](https://documentation.wazuh.com/)
 - [Nessus Product Page](https://www.tenable.com/products/nessus)
+
 <!-- PORTFOLIO: REFERENCES END -->

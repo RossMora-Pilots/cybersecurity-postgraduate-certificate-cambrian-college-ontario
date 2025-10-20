@@ -71,12 +71,14 @@ Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - C
 <!-- PORTFOLIO: NAVIGATION END -->
 
 <!-- PORTFOLIO: SKILLS START -->
+
 - Network Security
 - Active Directory & GPO
 - Vulnerability Management (Nessus/Nmap)
 - SIEM (Wazuh)
 - Linux/Windows Hardening
 - Bash & PowerShell Automation
+
 <!-- PORTFOLIO: SKILLS END -->
 
 ## Skills → Roles (at a glance)
@@ -85,7 +87,6 @@ Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - C
 - Vulnerability Mgmt: baselines; scan (Nmap/Nessus/OpenVAS); prioritize; verify remediation
 - Network Security: segmentation; firewall policies (OPNsense); IDS rules; packet analysis
 - Platform Hardening: Windows (GPO/Defender), Linux (CIS‑style changes), scripted patches
-
 
 ## Start Here
 

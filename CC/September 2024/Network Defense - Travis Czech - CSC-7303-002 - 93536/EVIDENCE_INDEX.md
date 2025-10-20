@@ -3,15 +3,19 @@
 This guide groups screenshots by week/topic and links each image with a short caption.
 
 ## General — Screenshots
+
 - [Screenshot3_FirewallConfig.png](screenshots/Screenshot3_FirewallConfig.png) — Evidence snapshot
 
 ## Week 01 — Labsetup
+
 - [wk01_labsetup_1.png](screenshots/wk01_labsetup_1.png) — Lab topology and VM setup verification
 
 ## Week 1 — Labsetup
+
 - [wk1_labsetup_1.png](screenshots/wk1_labsetup_1.png) — Lab topology and VM setup verification
 
 ## Week 10 — Lab6
+
 - [wk10_lab6_1.png](screenshots/wk10_lab6_1.png) — Week 10 Lab 6 remediation/validation
 - [wk10_lab6_10.png](screenshots/wk10_lab6_10.png) — Week 10 Lab 6 remediation/validation
 - [wk10_lab6_11.png](screenshots/wk10_lab6_11.png) — Week 10 Lab 6 remediation/validation
@@ -87,6 +91,7 @@ This guide groups screenshots by week/topic and links each image with a short ca
 - [wk10_lab6_9.png](screenshots/wk10_lab6_9.png) — Week 10 Lab 6 remediation/validation
 
 ## Week 12 — Opnsense
+
 - [wk12_opnsense_1.png](screenshots/wk12_opnsense_1.png) — OPNsense dashboard/rules configuration
 - [wk12_opnsense_2.png](screenshots/wk12_opnsense_2.png) — OPNsense dashboard/rules configuration
 - [wk12_opnsense_3.png](screenshots/wk12_opnsense_3.png) — OPNsense dashboard/rules configuration
@@ -96,4 +101,3 @@ This guide groups screenshots by week/topic and links each image with a short ca
 - [wk12_opnsense_7.png](screenshots/wk12_opnsense_7.png) — OPNsense dashboard/rules configuration
 - [wk12_opnsense_8.png](screenshots/wk12_opnsense_8.png) — OPNsense dashboard/rules configuration
 - [wk12_opnsense_9.png](screenshots/wk12_opnsense_9.png) — OPNsense dashboard/rules configuration
-
