@@ -1,11 +1,12 @@
 # Cybersecurity Postgraduate Certificate – Cambrian College (Portfolio)
+
 [![Portfolio CI](https://github.com/RossMora/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/RossMora/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml)
 
-This public portfolio showcases coursework and hands-on projects completed as part of the **Cybersecurity Postgraduate Certificate** at Cambrian College (Ontario), following completion of a previous Bachelor of Applied Information Systems Technology (BAIST) program at the Northern Alberta Institute of Technology, Edmonton, Alberta. 
-
+This public portfolio showcases coursework and hands-on projects completed as part of the **Cybersecurity Postgraduate Certificate** at Cambrian College (Ontario), following completion of a previous Bachelor of Applied Information Systems Technology (BAIST) program at the Northern Alberta Institute of Technology, Edmonton, Alberta.
 
 ## Structure
-```
+
+```text
 CC/
   September 2024/
     Network Defense - Travis Czech - CSC-7303-002 - 93536/
