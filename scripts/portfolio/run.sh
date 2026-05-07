@@ -71,8 +71,8 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
           scandir: |
-            CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts
-            CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts-extra
+            CC/September 2024/network-defense-fall-2024/scripts
+            CC/September 2024/network-defense-fall-2024/scripts-extra
 YML
   fi
 }

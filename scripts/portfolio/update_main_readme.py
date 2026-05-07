@@ -66,7 +66,7 @@ def main():
 
     root = Path(args.root)
     cfg = load_config(Path(args.config))
-    course_path = cfg.get("course_path", "CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536")
+    course_path = cfg.get("course_path", "CC/September 2024/network-defense-fall-2024")
 
     readme = root / "README.md"
     if not readme.exists():

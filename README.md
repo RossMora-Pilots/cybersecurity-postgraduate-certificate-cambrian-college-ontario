@@ -26,30 +26,30 @@ The portfolio is organized term → course. The Fall 2024 Network Defense course
 ```text
 CC/
   September 2024/
-    Network Defense - Travis Czech - CSC-7303-002 - 93536/
-      README.md                              ← Course portfolio (start here)
-      MIDTERM_PROJECT_SUMMARY.md             ← Multi-system hardening project (93/100)
-      FINAL_EXAM_VULNERABILITY_ASSESSMENT.md ← Vulnerability assessment (95.7% closure)
-      EVIDENCE_INDEX.md                      ← Grouped screenshot captions
-      SCRIPTS_README.md                      ← Script usage notes
-      assignments/                           ← Lab and project PDFs
-      scripts/                               ← Hardening / remediation scripts
-      scripts-extra/                         ← Lab infra & intentionally vulnerable baselines
-      screenshots/                           ← Visual evidence
+    network-defense-fall-2024/                 ← CSC-7303-002, 93536
+      README.md                                ← Course portfolio (start here)
+      MIDTERM_PROJECT_SUMMARY.md               ← Multi-system hardening project (93/100)
+      FINAL_EXAM_VULNERABILITY_ASSESSMENT.md   ← Vulnerability assessment (95.7% closure)
+      EVIDENCE_INDEX.md                        ← Grouped screenshot captions
+      SCRIPTS_README.md                        ← Script usage notes
+      assignments/                             ← Lab and project PDFs
+      scripts/                                 ← Hardening / remediation scripts
+      scripts-extra/                           ← Lab infra & intentionally vulnerable baselines
+      screenshots/                             ← Visual evidence
 ```
 
 ### Suggested reading paths
 
-**5 minutes** — Read the *At a Glance* block above, then skim the [Network Defense course README](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md).
+**5 minutes** — Read the *At a Glance* block above, then skim the [Network Defense course README](CC/September%202024/network-defense-fall-2024/README.md).
 
-**15 minutes** — Read the [Midterm summary](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/MIDTERM_PROJECT_SUMMARY.md) and the [Final exam vulnerability assessment](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/FINAL_EXAM_VULNERABILITY_ASSESSMENT.md), then look at the four `Fix_*.sh` scripts in `CC/.../scripts/`.
+**15 minutes** — Read the [Midterm summary](CC/September%202024/network-defense-fall-2024/MIDTERM_PROJECT_SUMMARY.md) and the [Final exam vulnerability assessment](CC/September%202024/network-defense-fall-2024/FINAL_EXAM_VULNERABILITY_ASSESSMENT.md), then look at the four `Fix_*.sh` scripts in `CC/September 2024/network-defense-fall-2024/scripts/`.
 
-**30 minutes** — Add the [Weekly Portfolio PDF](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/WEEKLY_PORTFOLIO.pdf) plus the assignment PDFs in `CC/.../assignments/` for week-by-week deliverables.
+**30 minutes** — Add the [Weekly Portfolio PDF](CC/September%202024/network-defense-fall-2024/WEEKLY_PORTFOLIO.pdf) plus the assignment PDFs in `CC/September 2024/network-defense-fall-2024/assignments/` for week-by-week deliverables.
 
 ## Quick Links
 
-- [Network Defense — September 2024](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md)
-- [Weekly Portfolio (PDF)](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/WEEKLY_PORTFOLIO.pdf)
+- [Network Defense — Fall 2024](CC/September%202024/network-defense-fall-2024/README.md)
+- [Weekly Portfolio (PDF)](CC/September%202024/network-defense-fall-2024/WEEKLY_PORTFOLIO.pdf)
 
 ## References
 
