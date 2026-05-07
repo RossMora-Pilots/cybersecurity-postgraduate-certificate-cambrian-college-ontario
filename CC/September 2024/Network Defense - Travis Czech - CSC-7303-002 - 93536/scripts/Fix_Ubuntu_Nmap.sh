@@ -1,28 +1,24 @@
-#!/bin/bash
-# Usage: bash Fix_Ubuntu_Nmap.sh
-# Usage: sudo ./Fix_Ubuntu_Nmap.sh
-# Fix_Ubuntu_Nmap.sh – Script to address vulnerabilities identified by Nmap on Ubuntu
-# Ensure the script is run on the correct system
-if [[ "$(hostname)" != "ubuntu-desktop" ]]; then
-  echo "This script is intended for Ubuntu. Exiting to prevent errors."
+#!/usr/bin/env bash
+# Fix_Ubuntu_Nmap.sh — Address Nmap-identified issues on Ubuntu.
+# Usage: sudo ./Fix_Ubuntu_Nmap.sh [--force]
+set -euo pipefail
+
+EXPECTED_HOSTNAME="ubuntu-desktop"
+FORCE=false
+[[ "${1:-}" == "--force" ]] && FORCE=true
+
+if [[ "$(hostname)" != "$EXPECTED_HOSTNAME" && "$FORCE" != true ]]; then
+  echo "WARN: hostname '$(hostname)' != '$EXPECTED_HOSTNAME'. Re-run with --force to override." >&2
   exit 1
 fi
-echo "Starting Fix_Ubuntu_Nmap.sh on 'ubuntu-desktop'..."
-# Fix SSH Configuration (disable root login)
-echo "Securing SSH configuration..."
-if grep -q "^PermitRootLogin yes" /etc/ssh/sshd_config; then
-  sed -i 's/^PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
-  echo "Root login disabled in SSH."
-else
-  echo "Root login already disabled."
-fi
-# Restart SSH service
-echo "Restarting SSH service..."
+
+echo "[*] Disabling SSH root login..."
+sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
 systemctl restart ssh
-# Restrict HTTP methods (disable TRACE/TRACK in Apache)
-echo "Restricting HTTP methods..."
-if [[ -f /etc/apache2/apache2.conf ]]; then
-  echo "
+
+echo "[*] Restricting HTTP TRACE/TRACK..."
+if [[ -f /etc/apache2/apache2.conf ]] && ! grep -q "RewriteCond %{REQUEST_METHOD} \^(TRACE|TRACK)" /etc/apache2/apache2.conf; then
+  cat <<'EOF' >> /etc/apache2/apache2.conf
 <Directory /var/www/html>
     <IfModule mod_headers.c>
         Header always unset X-Powered-By
@@ -31,19 +27,14 @@ if [[ -f /etc/apache2/apache2.conf ]]; then
     RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
     RewriteRule .* - [F]
 </Directory>
-" >> /etc/apache2/apache2.conf
-  echo "HTTP methods TRACE and TRACK restricted."
-else
-  echo "Apache configuration file not found. Skipping HTTP methods restriction."
+EOF
 fi
-# Restart Apache service
-echo "Restarting Apache service..."
 systemctl restart apache2
-# Close unused ports via UFW
-echo "Closing unused ports..."
-ufw enable
+
+echo "[*] Closing unused ports (4444, 3389) via UFW..."
+ufw --force enable
 ufw deny 4444
 ufw deny 3389
 ufw reload
-echo "Ports 4444 and 3389 closed."
-echo "Fix_Ubuntu_Nmap.sh completed. Please verify changes and re-run Nmap for validation."
+
+echo "[+] Fix_Ubuntu_Nmap.sh complete. Re-run Nmap to validate."

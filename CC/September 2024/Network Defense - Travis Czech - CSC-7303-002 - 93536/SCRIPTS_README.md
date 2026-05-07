@@ -1,23 +1,42 @@
 # Scripts — Usage and Notes
 
-This document summarizes the purpose and basic usage of each script.
+All scripts share a common shape:
 
-## Student-Created Scripts (scripts/)
+- `#!/usr/bin/env bash` shebang and `set -euo pipefail` — fail fast on errors and undefined variables.
+- A hostname precheck so the script refuses to run on the wrong host. Pass `--force` to override (useful when running outside the original lab VM).
 
-- `Fix_CentOS_Nessus.sh` — Fix_CentOS_Nessus.sh – Address Nessus-reported vulnerabilities on CentOS Machine-specific check — [OK]
-- `Fix_CentOS_Nmap.sh` — Fix_CentOS_Nmap.sh – Address Nmap-identified issues on CentOS Machine-specific check — [OK]
-- `Fix_Ubuntu_Nessus.sh` — Fix_Ubuntu_Nessus.sh – Script to address vulnerabilities identified by Nessus on Ubuntu Machine-Specific Precheck — [OK]
-- `Fix_Ubuntu_Nmap.sh` — Fix_Ubuntu_Nmap.sh – Script to address vulnerabilities identified by Nmap on Ubuntu Ensure the script is run on the correct system — [OK]
-- `install_openvas.sh` — install_openvas.sh – Automates OpenVAS installation and setup on Kali — [OK]
-- `kali_update.sh` — kali_update.sh — nightly updates for Kali — [OK]
+Run as root or via `sudo`.
 
-## Provided/External Scripts (scripts-extra/)
+## Student-Authored (`scripts/`)
 
-- `1_networkadapters.ps1` — Create a NAT network called "WAN" — [OK]
-- `2_img_to_iso.ps1` — Path to oscdimg — [OK]
-- `3_img_to_vdi.ps1` — No description — [OK]
-- `VulnerableCentOS.sh` — Intentionally Vulnerable Script for CentOS Stream 9 Use ONLY in an isolated educational lab environment! Run as root or with sudo privileges. — [OK]
-- `VulnerableUbuntu.sh` — Intentionally Vulnerable Script for Ubuntu 24.04 Use ONLY in an isolated educational lab environment! Run as root or with sudo privileges. — [OK]
-- `makevulnerable.ps1` — EXTREMELY VULNERABLE POWER SHELL SCRIPT                                 # WARNING: Use in an isolated lab environment ONLY!                       # WARNING: DO NOT use this script on production or connected systems.     # WARNING: The vulnerabilities introduced can result in full compromise! # — [OK]
+| Script | Purpose |
+|---|---|
+| [`Fix_Ubuntu_Nessus.sh`](scripts/Fix_Ubuntu_Nessus.sh) | Address Nessus findings on Ubuntu — Suricata update, SSH hardening, Apache update, malicious cron/service removal. |
+| [`Fix_Ubuntu_Nmap.sh`](scripts/Fix_Ubuntu_Nmap.sh) | Address Nmap findings on Ubuntu — disable HTTP TRACE/TRACK, close ports 4444/3389 via UFW. |
+| [`Fix_CentOS_Nessus.sh`](scripts/Fix_CentOS_Nessus.sh) | Address Nessus findings on CentOS Stream 9 — file-permission baseline, `httpd`/Suricata patching, SSH hardening. |
+| [`Fix_CentOS_Nmap.sh`](scripts/Fix_CentOS_Nmap.sh) | Address Nmap findings on CentOS — `firewalld` enforcement, Apache header hardening, service pruning. |
+| [`install_openvas.sh`](scripts/install_openvas.sh) | Install and initialize OpenVAS / Greenbone on Kali. |
+| [`kali_update.sh`](scripts/kali_update.sh) | Nightly unattended `apt update && upgrade && autoremove` on Kali. |
 
-Safety: Review scripts before running; test in lab VMs. Use with appropriate privileges.
+### Example invocations
+
+```bash
+sudo ./Fix_Ubuntu_Nessus.sh                # runs only on hostname=ubuntu-desktop
+sudo ./Fix_Ubuntu_Nessus.sh --force        # bypass the hostname check
+sudo ./kali_update.sh                      # safe to run anywhere apt is present
+```
+
+## Provided / External (`scripts-extra/`)
+
+These were supplied by the instructor for course infrastructure and adversarial-baseline scenarios. They are kept here for transparency about how the lab environment was prepared and how starting-state vulnerabilities were introduced.
+
+| Script | Purpose |
+|---|---|
+| `1_networkadapters.ps1` | Create a NAT network ("WAN") in VirtualBox for the lab topology. |
+| `2_img_to_iso.ps1` | Convert image media during VM preparation. |
+| `3_img_to_vdi.ps1` | Convert disk images to VDI for VirtualBox. |
+| `VulnerableCentOS.sh` | **Deliberately weakens** a CentOS Stream 9 VM for the final-exam scenario. |
+| `VulnerableUbuntu.sh` | **Deliberately weakens** an Ubuntu 24.04 VM for the final-exam scenario. |
+| `makevulnerable.ps1` | **Deliberately weakens** a Windows VM (disables UAC, enables SMBv1, etc.). |
+
+> **Safety:** Every "Vulnerable*" script reduces security on purpose. They must only run inside an isolated, disposable lab VM that has no internet routing or shared credentials. See `scripts-extra/README.md` for the full warning.

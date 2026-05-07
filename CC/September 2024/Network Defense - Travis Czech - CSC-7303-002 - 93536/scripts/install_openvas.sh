@@ -1,10 +1,11 @@
-#!/bin/bash
-# Usage: bash install_openvas.sh
+#!/usr/bin/env bash
+# install_openvas.sh — install and initialize OpenVAS / Greenbone on Kali.
 # Usage: sudo ./install_openvas.sh
-# install_openvas.sh – Automates OpenVAS installation and setup on Kali
-set -e
+set -euo pipefail
+
 apt update
 apt install -y openvas
-gvm-setup       # Initialize Greenbone Vulnerability Manager (fetch feeds, etc.)
-gvm-start       # Start OpenVAS services (gvmd, ospd-openvas, and gsad)
-echo "OpenVAS installation and setup complete."
+gvm-setup
+gvm-start
+
+echo "[install_openvas] Setup complete."

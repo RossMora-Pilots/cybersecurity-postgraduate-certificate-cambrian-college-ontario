@@ -1,68 +1,79 @@
-# Midterm Project: Multi-System Security Hardening & Integration
-## Grade: 93/100
+# Midterm Project — Multi-System Security Hardening & Integration
 
-### Project Overview
-This project hardened a multi-VM environment (Windows Server 2022, Windows 11, Ubuntu, CentOS, OPNsense) and integrated identity + monitoring.
+**Course:** CSC-7303 Network Defense (Cambrian College, Fall 2024)
+**Grade:** 93/100
 
-### Objectives Achieved
-- Domain Controller deployment and GPO configuration
-- Windows/Linux baseline hardening
-- OPNsense firewall rules + segmentation
-- Wazuh SIEM visibility across hosts
+## Executive Summary
 
-### Architecture Deployed
+This midterm project hardened a five-host lab environment (Windows Server 2022 DC, Windows 11 client, Ubuntu 24, CentOS Stream 9, OPNsense gateway) and bound the hosts together with centralized identity (AD/GPO) and centralized monitoring (Wazuh). Each system was treated as a layer of defense-in-depth: the perimeter at OPNsense, identity and policy at the DC, host-level controls on each endpoint, and detection on top.
+
+## Architecture
+
 ```
-[Client] -- [OPNsense] -- [Server 2022 DC] -- [Ubuntu/CentOS] -- [Wazuh]
+                ┌────────────┐
+                │  Internet  │
+                └──────┬─────┘
+                       │
+              ┌────────┴────────┐
+              │  OPNsense GW    │  default-deny inbound, NAT, segmentation
+              └────────┬────────┘
+              ┌────────┼────────┬─────────────────┐
+              │        │        │                 │
+        ┌─────┴───┐ ┌──┴───┐ ┌──┴───┐         ┌───┴────┐
+        │ WS 2022 │ │Ubuntu│ │CentOS│  …      │ Win 11 │
+        │  DC/DNS │ │      │ │      │         │ client │
+        └─────┬───┘ └──┬───┘ └──┬───┘         └───┬────┘
+              │        │        │                 │
+              └────────┴────────┴────────┬────────┘
+                                          │
+                                  ┌───────┴───────┐
+                                  │  Wazuh SIEM   │
+                                  └───────────────┘
 ```
 
-### Key Implementations
-1. Active Directory setup and OU structure (evidence in screenshots/)
-2. Windows Server + Windows 11 hardening (assignments PDFs)
-3. Ubuntu/CentOS hardening scripts (scripts/)
-4. OPNsense rules + NAT (screenshots/)
-5. Wazuh agent deployment and alerting (screenshots/)
+## What I Built
 
-### Evidence Links
-- See assignments/ PDFs for lab deliverables
-- See scripts/ for automation and remediation
-- See screenshots/ for configuration and results
+### Identity & Policy (Windows Server 2022)
 
-### Challenges & Solutions
-- Service exposure: reduced via firewall + service pruning
-- SSH/WinRM security: hardened auth and policies
+- Promoted to **Domain Controller** with AD DS + DNS for `LAB.LOCAL`.
+- Created an OU structure (`Servers`, `Workstations`, `Users`) and seeded test accounts.
+- Configured 50+ GPOs covering: SMBv1 disable, Windows Defender Firewall enforcement, BitLocker policy (allow-without-TPM for VM), audit logging, password policy.
 
-### What This Demonstrates
-- Multi-system security engineering, automation, and verification
+### Endpoints (Windows 11, Ubuntu 24, CentOS Stream 9)
 
-### Key Metrics
+- **Windows 11:** Domain-joined; enabled BitLocker; disabled legacy services (Telnet, SMBv1).
+- **Ubuntu:** UFW default-deny; SSH key-only with `PermitRootLogin no`; Fail2Ban; updates pinned.
+- **CentOS:** `firewalld` default-deny zone; `httpd` headers hardened (`ServerTokens Prod`, `ServerSignature Off`, TRACE off); LUKS-encrypted volume mounted at `/mnt/encrypted`.
+
+### Perimeter (OPNsense)
+
+- Replaced the default permissive ruleset with explicit allow-lists (admin RDP scoped to a single management host, outbound web only).
+- Configured aliases for management subnets and applied per-interface firewall rules.
+
+### Detection (Wazuh)
+
+- Stood up the manager and rolled agents to all four endpoints.
+- Verified ingestion: SSH brute-force attempts on the Ubuntu host triggered alert level ≥10 within seconds.
+- Tuned a small set of rules to reduce noise (Windows Defender informational events).
+
+## Key Metrics
+
 | Metric | Value |
-|-------|-------|
-| Course Grade | 93/100 |
-| Systems Hardened | 7 |
-| GPO Policies Configured | 50+ |
+|---|---|
+| Course grade | 93/100 |
+| Hosts hardened | 5 (incl. gateway) |
+| GPOs configured | 50+ |
+| Wazuh agents deployed | 4 |
+| Lab duration | 8 weeks (cumulative) |
 
-### Evidence Links
-- See assignments/ PDFs for lab deliverables
-- See scripts/ for automation and remediation
-- See screenshots/ for configuration and results
-- Before/After examples:
-  - OPNsense dashboard: screenshots/wk12_opnsense_5.png
-  - Lab 6 validation: screenshots/wk10_lab6_12.png
-  - Lab setup: screenshots/wk01_labsetup_1.png
+## Lessons Learned
 
-### Architecture Diagram
-```mermaid
-flowchart LR
-  Client[Client] --> OPNsense(OPNsense FW)
-  OPNsense --> DC[Windows Server 2022 DC]
-  OPNsense --> Ubuntu[Ubuntu]
-  OPNsense --> CentOS[CentOS]
-  Ubuntu --> Wazuh[Wazuh]
-  CentOS --> Wazuh
-```
-```
-ASCII
-Client -> OPNsense -> DC
-                 -> Ubuntu -> Wazuh
-                 -> CentOS -> Wazuh
-```
+- **Layer ordering matters.** Hardening individual hosts before the AD/GPO layer was in place created drift; rolling GPOs in early made later changes propagate cleanly.
+- **Default-deny pays dividends.** Each time I tightened the firewall I broke something I had forgotten about, which surfaced legacy assumptions worth fixing.
+- **SIEM without tuning is noise.** Wazuh's out-of-the-box rules generate too many low-severity alerts; carving out the relevant ones is half the work.
+
+## Evidence
+
+- Lab deliverables: see [`assignments/`](assignments/) (`Midterm_2_*.pdf`, `Midterm_3_*.pdf`, weekly `Week01`–`Week08` PDFs).
+- Automation used in remediation: [`scripts/`](scripts/) (`Fix_Ubuntu_*.sh`, `Fix_CentOS_*.sh`).
+- Visual evidence: [`screenshots/wk01_labsetup_1.png`](screenshots/wk01_labsetup_1.png), [`screenshots/wk12_opnsense_4.png`](screenshots/wk12_opnsense_4.png), and the screenshots indexed in [`EVIDENCE_INDEX.md`](EVIDENCE_INDEX.md).

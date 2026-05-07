@@ -1,68 +1,50 @@
-#!/bin/bash
-# Usage: bash Fix_CentOS_Nessus.sh
-# Usage: sudo ./Fix_CentOS_Nessus.sh
-# Fix_CentOS_Nessus.sh – Address Nessus-reported vulnerabilities on CentOS
-# Machine-specific check
-if [[ "$(hostname)" != "localhost.localdomain" ]]; then
-    echo "This script is intended for the CentOS VM only (hostname: localhost.localdomain). Exiting to prevent errors."
-    exit 1
+#!/usr/bin/env bash
+# Fix_CentOS_Nessus.sh — Address Nessus-reported vulnerabilities on CentOS Stream 9.
+# Usage: sudo ./Fix_CentOS_Nessus.sh [--force]
+set -euo pipefail
+
+EXPECTED_HOSTNAME="localhost.localdomain"
+FORCE=false
+[[ "${1:-}" == "--force" ]] && FORCE=true
+
+if [[ "$(hostname)" != "$EXPECTED_HOSTNAME" && "$FORCE" != true ]]; then
+  echo "WARN: hostname '$(hostname)' != '$EXPECTED_HOSTNAME'. Re-run with --force to override." >&2
+  exit 1
 fi
-echo "Starting Fix_CentOS_Nessus.sh on $(hostname)..."
-# Function to handle errors
-handle_error() {
-    echo "Error encountered: $1"
-    echo "Please review logs and manually address the issue."
-}
-# 1. Disable Netcat Backdoor Service
-echo "Disabling Netcat backdoor service..."
+
+echo "[*] Disabling Netcat backdoor service if active..."
 if systemctl is-active --quiet malicious.service; then
-    systemctl stop malicious.service || handle_error "Failed to stop malicious.service"
-    systemctl disable malicious.service || handle_error "Failed to disable malicious.service"
-    echo "Netcat backdoor service disabled."
-else
-    echo "No malicious Netcat service found."
+  systemctl stop malicious.service
+  systemctl disable malicious.service
 fi
-# 2. Correct File Permissions
-echo "Correcting file permissions..."
-chmod 644 /etc/passwd || handle_error "Failed to set permissions for /etc/passwd"
-chmod 600 /etc/shadow || handle_error "Failed to set permissions for /etc/shadow"
-echo "File permissions corrected."
-# 3. Update Apache HTTP Server
-echo "Updating Apache HTTP server..."
-if ! (yum clean all && yum update -y httpd); then
-    handle_error "Failed to update Apache HTTP server"
+
+echo "[*] Correcting baseline file permissions..."
+chmod 644 /etc/passwd
+chmod 600 /etc/shadow
+
+echo "[*] Updating Apache HTTP Server..."
+yum clean all
+yum update -y httpd
+
+echo "[*] Updating FFmpeg if installed..."
+if rpm -q ffmpeg >/dev/null 2>&1; then
+  yum update -y ffmpeg
 fi
-echo "Apache HTTP server updated."
-# 4. Update FFmpeg
-echo "Updating FFmpeg..."
-if rpm -q ffmpeg; then
-    if ! (yum clean all && yum update -y ffmpeg); then
-        handle_error "Failed to update FFmpeg"
-    fi
-else
-    echo "FFmpeg not installed. Skipping update."
-fi
-# 5. Remove Malicious Cron Jobs
-echo "Removing malicious cron jobs..."
-crontab -l | grep -v 'malicious_job_command' | crontab - || handle_error "Failed to remove malicious cron jobs"
-echo "Malicious cron jobs removed."
-# 6. Secure SSH Configuration
-echo "Securing SSH configuration..."
+
+echo "[*] Removing any cron jobs containing 'malicious_job_command'..."
+crontab -l 2>/dev/null | grep -v 'malicious_job_command' | crontab -
+
+echo "[*] Hardening SSH (PermitRootLogin no)..."
 if grep -q "^PermitRootLogin" /etc/ssh/sshd_config; then
-    sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config || handle_error "Failed to update SSH configuration"
+  sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
 else
-    echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+  echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 fi
-systemctl restart sshd || handle_error "Failed to restart SSH service"
-echo "SSH configuration secured."
-# 7. Upgrade Suricata
-echo "Updating Suricata..."
-if rpm -q suricata; then
-    if ! (yum clean all && yum update -y suricata); then
-        handle_error "Failed to update Suricata"
-    fi
-else
-    echo "Suricata not installed. Skipping update."
+systemctl restart sshd
+
+echo "[*] Updating Suricata if installed..."
+if rpm -q suricata >/dev/null 2>&1; then
+  yum update -y suricata
 fi
-echo "Fix_CentOS_Nessus.sh completed. Please review the output and re-run Nessus for validation."
-exit 0
+
+echo "[+] Fix_CentOS_Nessus.sh complete. Re-run Nessus to validate."

@@ -1,99 +1,41 @@
 # Evidence & Screenshots Index
 
-This guide groups screenshots by week/topic and links each image with a short caption.
+This index groups every screenshot in [`screenshots/`](screenshots/) by the lab/topic it documents and provides a short caption.
 
-## General — Screenshots
-- [Screenshot3_FirewallConfig.png](screenshots/Screenshot3_FirewallConfig.png) — Evidence snapshot
+> The Mobile & IoT Security lab (Week 10, Lab 6) generated the largest screenshot set in this portfolio. The series captures the end-to-end workflow: ManageEngine MDM enrollment, agent deployment to Android/Windows VMs, Bitdefender device-admin activation, and the final re-scan/validation pass.
 
-## Week 01 — Labsetup
-- [wk01_labsetup_1.png](screenshots/wk01_labsetup_1.png) — Lab topology and VM setup verification
+## Week 1 — Lab Build
 
-## Week 1 — Labsetup
-- [wk1_labsetup_1.png](screenshots/wk1_labsetup_1.png) — Lab topology and VM setup verification
+| File | Caption |
+|------|---------|
+| [`wk01_labsetup_1.png`](screenshots/wk01_labsetup_1.png) | OPNsense post-install console showing LAN (`vmx0`) and WAN (`vmx1`) interface bindings on `192.168.1.1/24`. |
 
-## Week 10 — Lab6
-- [wk10_lab6_1.png](screenshots/wk10_lab6_1.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_10.png](screenshots/wk10_lab6_10.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_11.png](screenshots/wk10_lab6_11.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_12.png](screenshots/wk10_lab6_12.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_13.png](screenshots/wk10_lab6_13.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_14.png](screenshots/wk10_lab6_14.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_15.png](screenshots/wk10_lab6_15.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_16.png](screenshots/wk10_lab6_16.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_17.png](screenshots/wk10_lab6_17.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_18.png](screenshots/wk10_lab6_18.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_19.png](screenshots/wk10_lab6_19.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_2.png](screenshots/wk10_lab6_2.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_20.png](screenshots/wk10_lab6_20.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_21.png](screenshots/wk10_lab6_21.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_22.png](screenshots/wk10_lab6_22.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_23.png](screenshots/wk10_lab6_23.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_24.png](screenshots/wk10_lab6_24.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_25.png](screenshots/wk10_lab6_25.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_26.png](screenshots/wk10_lab6_26.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_27.png](screenshots/wk10_lab6_27.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_28.png](screenshots/wk10_lab6_28.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_29.png](screenshots/wk10_lab6_29.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_3.png](screenshots/wk10_lab6_3.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_30.png](screenshots/wk10_lab6_30.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_31.png](screenshots/wk10_lab6_31.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_32.png](screenshots/wk10_lab6_32.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_33.png](screenshots/wk10_lab6_33.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_34.png](screenshots/wk10_lab6_34.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_35.png](screenshots/wk10_lab6_35.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_36.png](screenshots/wk10_lab6_36.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_37.png](screenshots/wk10_lab6_37.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_38.png](screenshots/wk10_lab6_38.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_39.png](screenshots/wk10_lab6_39.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_4.png](screenshots/wk10_lab6_4.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_40.png](screenshots/wk10_lab6_40.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_41.png](screenshots/wk10_lab6_41.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_42.png](screenshots/wk10_lab6_42.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_43.png](screenshots/wk10_lab6_43.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_44.png](screenshots/wk10_lab6_44.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_45.png](screenshots/wk10_lab6_45.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_46.png](screenshots/wk10_lab6_46.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_47.png](screenshots/wk10_lab6_47.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_48.png](screenshots/wk10_lab6_48.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_49.png](screenshots/wk10_lab6_49.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_5.png](screenshots/wk10_lab6_5.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_50.png](screenshots/wk10_lab6_50.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_51.png](screenshots/wk10_lab6_51.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_52.png](screenshots/wk10_lab6_52.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_53.png](screenshots/wk10_lab6_53.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_54.png](screenshots/wk10_lab6_54.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_55.png](screenshots/wk10_lab6_55.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_56.png](screenshots/wk10_lab6_56.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_57.png](screenshots/wk10_lab6_57.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_58.png](screenshots/wk10_lab6_58.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_59.png](screenshots/wk10_lab6_59.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_6.png](screenshots/wk10_lab6_6.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_60.png](screenshots/wk10_lab6_60.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_61.png](screenshots/wk10_lab6_61.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_62.png](screenshots/wk10_lab6_62.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_63.png](screenshots/wk10_lab6_63.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_64.png](screenshots/wk10_lab6_64.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_65.png](screenshots/wk10_lab6_65.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_66.png](screenshots/wk10_lab6_66.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_67.png](screenshots/wk10_lab6_67.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_68.png](screenshots/wk10_lab6_68.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_69.png](screenshots/wk10_lab6_69.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_7.png](screenshots/wk10_lab6_7.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_70.png](screenshots/wk10_lab6_70.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_71.png](screenshots/wk10_lab6_71.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_72.png](screenshots/wk10_lab6_72.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_73.png](screenshots/wk10_lab6_73.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_8.png](screenshots/wk10_lab6_8.png) — Week 10 Lab 6 remediation/validation
-- [wk10_lab6_9.png](screenshots/wk10_lab6_9.png) — Week 10 Lab 6 remediation/validation
+## Week 10 — Mobile & IoT Security (Lab 6)
 
-## Week 12 — Opnsense
-- [wk12_opnsense_1.png](screenshots/wk12_opnsense_1.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_2.png](screenshots/wk12_opnsense_2.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_3.png](screenshots/wk12_opnsense_3.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_4.png](screenshots/wk12_opnsense_4.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_5.png](screenshots/wk12_opnsense_5.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_6.png](screenshots/wk12_opnsense_6.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_7.png](screenshots/wk12_opnsense_7.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_8.png](screenshots/wk12_opnsense_8.png) — OPNsense dashboard/rules configuration
-- [wk12_opnsense_9.png](screenshots/wk12_opnsense_9.png) — OPNsense dashboard/rules configuration
+This lab spans 73 screenshots covering MDM platform setup, device enrollment, policy deployment, and validation. Highlights:
 
+| File | Caption |
+|------|---------|
+| [`wk10_lab6_1.png`](screenshots/wk10_lab6_1.png) | Multi-pane lab view: Ubuntu router, Android (mobile) console, Windows server, and CentOS workstation running concurrently. |
+| [`wk10_lab6_5.png`](screenshots/wk10_lab6_5.png) | ManageEngine MDM web console (Android lab device) loading. |
+| [`wk10_lab6_12.png`](screenshots/wk10_lab6_12.png) | Endpoint Central — MDM enrollment & content lifecycle (devices → apps → policies → monitoring). |
+| [`wk10_lab6_30.png`](screenshots/wk10_lab6_30.png) | Bitdefender Security — *Activate device admin app* prompt on the managed Android VM. |
+| [`wk10_lab6_52.png`](screenshots/wk10_lab6_52.png) | CrystalMQ broker dashboard on CentOS — clients, topics, events, and rules panes used for IoT messaging tests. |
+
+The remaining `wk10_lab6_*` files capture intermediate enrollment, configuration, and validation steps. They are best reviewed alongside [`assignments/Lab_6_Mobile_and_IoT_Security_Implementation.pdf`](assignments/Lab_6_Mobile_and_IoT_Security_Implementation.pdf), which narrates each step.
+
+<details>
+<summary>Full Week 10 file list (73 files)</summary>
+
+`wk10_lab6_1.png` through `wk10_lab6_73.png` — sequential capture of the Mobile & IoT lab. See the lab PDF for ordered context.
+
+</details>
+
+## Weeks 11–12 — OPNsense Capstone
+
+| File | Caption |
+|------|---------|
+| [`wk12_opnsense_3.png`](screenshots/wk12_opnsense_3.png) | OPNsense privilege matrix — Firewall: Rules and Firewall: Rules: Edit GUI permissions assigned to the admin role. |
+| [`wk12_opnsense_4.png`](screenshots/wk12_opnsense_4.png) | OPNsense User Manager — System Administrator account, `/usr/local/sbin/opnsense-shell` login shell, `admins` group membership. |
+
+> **Note:** Earlier `wk12_opnsense_*` screenshots that exposed plaintext API keys were removed before this repo was made public. The corresponding API keys were rotated in OPNsense.
