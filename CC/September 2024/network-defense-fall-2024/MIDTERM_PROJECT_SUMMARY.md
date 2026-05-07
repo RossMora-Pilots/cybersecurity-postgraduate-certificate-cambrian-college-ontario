@@ -9,7 +9,7 @@ This midterm project hardened a five-host lab environment (Windows Server 2022 D
 
 ## Architecture
 
-```
+```text
                 ┌────────────┐
                 │  Internet  │
                 └──────┬─────┘
