@@ -1,9 +1,24 @@
 #!/bin/bash
-# Usage: bash VulnerableCentOS.sh
-# Usage: sudo ./VulnerableCentOS.sh
-# Intentionally Vulnerable Script for CentOS Stream 9
-# Use ONLY in an isolated educational lab environment!
-# Run as root or with sudo privileges.
+# VulnerableCentOS.sh — Intentionally weakens a CentOS Stream 9 VM for the
+# CSC-7303 final exam baseline. DO NOT RUN OUTSIDE AN ISOLATED LAB VM.
+#
+# Usage: sudo ./VulnerableCentOS.sh --yes-i-mean-it
+#
+# This script DELIBERATELY introduces vulnerabilities. Running it on a
+# real system, an internet-connected host, or a shared VM will create
+# real, exploitable weaknesses.
+
+if [[ "${1:-}" != "--yes-i-mean-it" ]]; then
+  cat >&2 <<'WARN'
+REFUSING TO RUN.
+
+This script deliberately weakens security on the host. It is for use
+inside an isolated lab VM only. Re-run with --yes-i-mean-it once you
+have confirmed the target is a disposable, snapshotted, network-isolated
+VM.
+WARN
+  exit 1
+fi
 
 echo "Creating a vulnerable CentOS Stream 9 environment..."
 

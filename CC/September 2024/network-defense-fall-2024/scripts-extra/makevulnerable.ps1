@@ -1,9 +1,27 @@
 ###########################################################################
-# EXTREMELY VULNERABLE POWER SHELL SCRIPT                                 #
-# WARNING: Use in an isolated lab environment ONLY!                       #
-# WARNING: DO NOT use this script on production or connected systems.     #
-# WARNING: The vulnerabilities introduced can result in full compromise! #
+# makevulnerable.ps1 — Intentionally weakens a Windows VM for the         #
+# CSC-7303 final exam baseline.                                           #
+#                                                                         #
+# DO NOT RUN OUTSIDE AN ISOLATED LAB VM.                                  #
+# Disables UAC, enables SMBv1, stores plaintext creds, weakens ACLs.      #
+#                                                                         #
+# Usage: powershell -ExecutionPolicy Bypass -File .\makevulnerable.ps1 `  #
+#          -YesIMeanIt                                                    #
 ###########################################################################
+
+param(
+    [switch]$YesIMeanIt
+)
+
+if (-not $YesIMeanIt) {
+    Write-Host "REFUSING TO RUN." -ForegroundColor Red
+    Write-Host ""
+    Write-Host "This script deliberately weakens security on the host."
+    Write-Host "It is for use inside an isolated lab VM only."
+    Write-Host "Re-run with -YesIMeanIt once you have confirmed the target"
+    Write-Host "is a disposable, snapshotted, network-isolated VM."
+    exit 1
+}
 
 Write-Host "Creating an environment with maximum vulnerabilities for educational purposes..." -ForegroundColor Red
 

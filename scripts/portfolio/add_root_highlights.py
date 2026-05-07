@@ -4,9 +4,9 @@ from pathlib import Path
 
 BLOCK = """
 ## Highlights
-- Midterm Project Summary → CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/MIDTERM_PROJECT_SUMMARY.md
-- Final Exam: Vulnerability Assessment → CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/FINAL_EXAM_VULNERABILITY_ASSESSMENT.md
-- Scripts Overview → CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/SCRIPTS_README.md
+- Midterm Project Summary → CC/September 2024/network-defense-fall-2024/MIDTERM_PROJECT_SUMMARY.md
+- Final Exam: Vulnerability Assessment → CC/September 2024/network-defense-fall-2024/FINAL_EXAM_VULNERABILITY_ASSESSMENT.md
+- Scripts Overview → CC/September 2024/network-defense-fall-2024/SCRIPTS_README.md
 """.strip()
 
 
