@@ -115,3 +115,17 @@ Each row links to the dedicated repository for that course. Repository names fol
 | Network Defense (in this repo) | CSC-7303 (Sept 2024) | [`CC/September 2024/Network Defense …/`](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md) |
 
 > **Deferred from cycle 1:** Policies & Compliance, Communications & Cybersecurity, and the three capstone projects are kept private pending consent or content review. They will be added to this index when published.
+
+<!-- PILOT-INDEX-CYCLE-2 -->
+## Pilot Index — Cycle 2 (Sanitized Public, 2026-05-08)
+
+These four repositories are sanitized public-portfolio versions of coursework that involved real third parties. See each repo's `SANITIZED.md` for what was redacted.
+
+| Domain | Course | Repository |
+| --- | --- | --- |
+| Policies & Compliance / GRC | CSC-7305 | [`403-Policies-Compliance-Public`](https://github.com/RossMora-Pilots/403-Policies-Compliance-Public) |
+| Cybersecurity Capstone (Team A) | CSC-7307 | [`411-Capstone-Public`](https://github.com/RossMora-Pilots/411-Capstone-Public) |
+| Cybersecurity Capstone (Team B) | CSC-7307 | [`412-Capstone-CSC-7307-Public`](https://github.com/RossMora-Pilots/412-Capstone-CSC-7307-Public) |
+| Cybersecurity Capstone (Team C) | CSC-7307 | [`413-Capstone-Winter-Public`](https://github.com/RossMora-Pilots/413-Capstone-Winter-Public) |
+
+> **Still deferred:** 404-Communications-Cybersecurity (empty working tree — content recovery needed before any publish is possible).
