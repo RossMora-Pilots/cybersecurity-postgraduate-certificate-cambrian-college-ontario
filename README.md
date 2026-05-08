@@ -1,6 +1,6 @@
 # Cybersecurity Postgraduate Certificate – Cambrian College (Portfolio)
 
-[![Portfolio CI](https://github.com/RossMora/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/RossMora/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml)
+[![Portfolio CI](https://github.com/RossMora-Pilots/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/RossMora-Pilots/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml)
 
 This public portfolio showcases coursework and hands-on projects completed as part of the **Cybersecurity Postgraduate Certificate** at Cambrian College (Ontario), following completion of a previous Bachelor of Applied Information Systems Technology (BAIST) program at the Northern Alberta Institute of Technology, Edmonton, Alberta.
 
@@ -96,3 +96,22 @@ Network Defense Course → `CC/September 2024/Network Defense - Travis Czech - C
 
 - Wazuh Documentation: <https://documentation.wazuh.com/>
 - Nessus Product Page: <https://www.tenable.com/products/nessus>
+
+<!-- PILOT-INDEX-CYCLE-1 -->
+## Pilot Index — Cycle 1 (Public, 2026-05-07)
+
+Each row links to the dedicated repository for that course. Repository names follow either the program-numbering convention (`4XX-…`) or the original course-code naming (`*-CSC-XXXX`) where the canonical content was originally published under that name.
+
+| Domain | Course | Repository |
+| --- | --- | --- |
+| Network Security / NGFW | CSC-7302 CSEC Infrastructure | [`CSEC-Infrastructure-CSC-7302`](https://github.com/RossMora-Pilots/CSEC-Infrastructure-CSC-7302) |
+| Business Continuity & IR | CSC-7304 Business Continuity | [`402-Business-Continuity`](https://github.com/RossMora-Pilots/402-Business-Continuity) |
+| Wireless / Mobile Security | CSC-7306 Mobile Wireless Security | [`405-Mobile-Wireless-Security`](https://github.com/RossMora-Pilots/405-Mobile-Wireless-Security) |
+| SysOps & Cloud SOC | CSC-7308 SysOps & Cloud Security | [`406-SysOps-Cloud-Security`](https://github.com/RossMora-Pilots/406-SysOps-Cloud-Security) |
+| Secure Tool Development (Rust) | CSC-7309 CSEC Tool Development | [`CSEC-Tool-Development-CSC-7309`](https://github.com/RossMora-Pilots/CSEC-Tool-Development-CSC-7309) |
+| Digital Forensics | CSC-7310 IT Security Forensics | [`IT-Security-Forensics-CSC-7310`](https://github.com/RossMora-Pilots/IT-Security-Forensics-CSC-7310) |
+| Ethical Hacking | CSC-7311 Ethical Hacking | [`Ethical-Hacking-CSC-7311`](https://github.com/RossMora-Pilots/Ethical-Hacking-CSC-7311) |
+| Malware Analysis | CSC-7312 Malware Dev & Analysis | [`Malware-Analysis-CSC-7312`](https://github.com/RossMora-Pilots/Malware-Analysis-CSC-7312) |
+| Network Defense (in this repo) | CSC-7303 (Sept 2024) | [`CC/September 2024/Network Defense …/`](CC/September%202024/Network%20Defense%20-%20Travis%20Czech%20-%20CSC-7303-002%20-%2093536/README.md) |
+
+> **Deferred from cycle 1:** Policies & Compliance, Communications & Cybersecurity, and the three capstone projects are kept private pending consent or content review. They will be added to this index when published.
