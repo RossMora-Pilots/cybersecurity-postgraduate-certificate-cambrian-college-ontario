@@ -1,0 +1,12 @@
+title: Ross Moravec — Cybersecurity Portfolio
+description: Cybersecurity portfolio — NGFW · SIEM · forensics · malware analysis · ethical hacking · GRC · Rust security tooling. 12 graded postgraduate courses + 4 sanitized capstones.
+theme: jekyll-theme-cayman
+markdown: kramdown
+exclude:
+  - .github
+  - .gitignore
+  - .gitleaks.toml
+  - .gitmessage.txt
+  - .markdownlint.json
+  - CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts
+  - CC/September 2024/Network Defense - Travis Czech - CSC-7303-002 - 93536/scripts-extra
