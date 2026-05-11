@@ -133,13 +133,13 @@ Each row links to the dedicated repository for that course. Repository names fol
 <!-- PILOT-INDEX-CYCLE-2 -->
 ## Pilot Index — Cycle 2 (Sanitized Public, 2026-05-08)
 
-These four repositories are sanitized public-portfolio versions of coursework that involved real third parties. See each repo's `SANITIZED.md` for what was redacted.
+412 is the canonical sanitized capstone repository — Ross was the sole Wazuh SIEM deployer and authored all four configuration script iterations. Teammate-perspective repos (411, 413) are archived to keep the index focused on individual contribution.
 
 | Domain | Course | Repository |
 | --- | --- | --- |
 | Policies & Compliance / GRC | CSC-7305 | [`403-Policies-Compliance-Public`](https://github.com/RossMora-Pilots/403-Policies-Compliance-Public) |
-| Cybersecurity Capstone (Team A) | CSC-7307 | [`411-Capstone-Public`](https://github.com/RossMora-Pilots/411-Capstone-Public) |
-| Cybersecurity Capstone (Team B) | CSC-7307 | [`412-Capstone-CSC-7307-Public`](https://github.com/RossMora-Pilots/412-Capstone-CSC-7307-Public) |
-| Cybersecurity Capstone (Team C) | CSC-7307 | [`413-Capstone-Winter-Public`](https://github.com/RossMora-Pilots/413-Capstone-Winter-Public) |
+| Cybersecurity Capstone (Wazuh SIEM, ISO 27001) | CSC-7307 | [`412-Capstone-CSC-7307-Public`](https://github.com/RossMora-Pilots/412-Capstone-CSC-7307-Public) |
+
+*Archived (kept private as teammate-perspective views of the same capstone): `411-Capstone-Public`, `413-Capstone-Winter-Public`. 412 is the repository with explicit individual-contribution claims (sole Wazuh deployer, sole author of 4 configuration script iterations, critical-bug discovery, false-positive reduction 35% → 12%).*
 
 > **Still deferred:** 404-Communications-Cybersecurity (empty working tree — content recovery needed before any publish is possible).
