@@ -1,3 +1,17 @@
+# Ross Moravec — Cybersecurity Portfolio
+
+> **Targeting:** junior SOC analyst · security engineer · IR/forensics analyst · GRC analyst
+> **Based in:** Sudbury, Ontario, Canada · Open to remote (Canada) or relocation within Ontario
+> **Available:** immediately (Postgraduate Certificate complete, 2024–2025)
+
+📧 [ross@moravec.dev](mailto:ross@moravec.dev) · 🔗 [LinkedIn /in/rossmoravec](https://www.linkedin.com/in/rossmoravec/) · 🐙 [GitHub /RossMora-Pilots](https://github.com/RossMora-Pilots)
+
+**What this portfolio shows:** 12 graded postgraduate cybersecurity courses + 4 sanitized industry-capstone repositories. Hands-on lab evidence across **NGFW (Palo Alto), SIEM (Wazuh), forensics (FTK/Autopsy), malware analysis (WannaCry/Remcos), ethical hacking (TryHackMe), GRC (ISO 27001/NIST CSF)**, and **Rust security-tool development**. Every project links to its source artifacts, screenshots, and a documented learning narrative.
+
+**For recruiters in a hurry:** if you have 5 minutes, read [`Malware-Analysis-CSC-7312`](https://github.com/RossMora-Pilots/Malware-Analysis-CSC-7312) (best single artifact). If you have 15, also read [`CSEC-Infrastructure-CSC-7302`](https://github.com/RossMora-Pilots/CSEC-Infrastructure-CSC-7302) (NGFW depth) and [`412-Capstone-CSC-7307-Public`](https://github.com/RossMora-Pilots/412-Capstone-CSC-7307-Public) (sole-deployer Wazuh SIEM).
+
+---
+
 # Cybersecurity Postgraduate Certificate – Cambrian College (Portfolio)
 
 [![Portfolio CI](https://github.com/RossMora-Pilots/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/RossMora-Pilots/cybersecurity-postgraduate-certificate-cambrian-college-ontario/actions/workflows/portfolio-ci.yml)
